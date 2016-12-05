@@ -1,10 +1,14 @@
-<div class="pa3 pv4 bg-blue white tc">
-  <h1 class="f1 mt0 tracked ttu sans-serif">Reverie</h1> 
-  <div class="f4 flex content-center justify-center flex-row-ns">
-    {{#link-to "notes" class="f4 dim link bw1 bb white"}}Notes{{/link-to}}
-  </div>
-</div>
-<div class="mw6-ns pa3 center">
+<header class="bg-white black-80 tc pv4 avenir">
+  <h1 class="mt2 mb0 baskerville i fw1 f1">Reverie</h1>
+  <h2 class="mt2 mb0 f6 fw4 ttu tracked">Moments, places, people</h2>
+  <nav class="bt bb tc mw7 center mt4">
+    {{#link-to "notes" class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"}}Notes{{/link-to}}
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/portfolio">Stickers</a> 
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" href="/shop">About</a> 
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" href="/about">Log in</a> 
+  </nav>
+</header>
+<div class="mw6-ns pa3 center avenir">
   {{outlet}}
 </div>
 
