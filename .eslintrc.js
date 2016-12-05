@@ -15,6 +15,7 @@ module.exports = {
   },
 
   rules: {
-    'object-curly-spacing': 0
+    'object-curly-spacing': 0,
+    'ember-suave/require-access-in-comments': 0
   }
 };

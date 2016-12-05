@@ -38,7 +38,8 @@
     "ember-welcome-page": "^1.0.3",
     "eslint": "^3.11.1",
     "eslint-plugin-ember-suave": "^1.0.0",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+    "tachyons": "^4.5.5"
   },
   "engines": {
     "node": ">= 0.12.0"
