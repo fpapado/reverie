@@ -52,7 +52,7 @@ test('should filter the list of notes by category.', function(assert) {
   keyEvent('.list-filter input', 'keyup', 69);
   andThen(function() {
     assert.equal(find('.note').length, 1, 'should show 1 note');
-    assert.equal(find('.note .category:contains("Teambuilding")').length, 1,
+    assert.equal(find('.note .note-category:contains("Teambuilding")').length, 1,
       'should contain 1 note with category teambuilding');
   });
 });
