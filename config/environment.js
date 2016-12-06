@@ -23,17 +23,17 @@ module.exports = function(environment) {
     }
   };
 
-  // ENV.manifest = {
-  //   enabled: true,
-  //   appcacheFile: '/manifest.appcache',
-  //   excludePaths: ['index.html', 'tests/index.html', 'robots.txt', 'crossdomain.xml', 'testem.js'],
-  //   showCreateDate: true
-  // };
+  ENV.manifest = {
+    enabled: true,
+    appcacheFile: '/manifest.appcache',
+    excludePaths: ['index.html', 'tests/index.html', 'robots.txt', 'crossdomain.xml', 'testem.js'],
+    showCreateDate: true
+  };
 
   ENV.serviceWorker = {
     enabled: true,
-    debug: true
-    // excludePaths: ['manifest.appcache'],
+    debug: true,
+    excludePaths: ['manifest.appcache'],
     // swIncludeFiles: [
     //   'node_modules/pouchdb/dist/pouchdb.js'
     // ]

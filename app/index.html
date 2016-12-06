@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <head>
+  <head manifest="manifest.appcache">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Reverie</title>
@@ -14,6 +14,21 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+    <script>
+      if (!'serviceWorker' in navigator) {
+        // Check if a new cache is available on page load.
+        // If there is, swap the old cache with the new one
+        // and reload the window to put it into effect
+        window.addEventListener('load', function(e){
+          window.applicationCache.addEventListener('updateready', function(e){
+            if(window.applicationCache.status==window.applicationCache.UPDATEREADY) {
+            window.applicationCache.swapCache();
+            window.location.reload();
+          }
+        },false);
+      },false);
+    }
+    </script>
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
