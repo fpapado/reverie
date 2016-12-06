@@ -23,6 +23,15 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.manifest = {
+    enabled: true,
+    appcacheFile: '/manifest.appcache',
+    excludePaths: ['index.html', 'someother.html'],
+    includePaths: ['/'],
+    network: ['api/'],
+    showCreateDate: true
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
