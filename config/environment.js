@@ -42,14 +42,19 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  // Default ember-pouch config for dev
   ENV.emberPouch = {
     localDb: 'local_pouch',
     remoteDb: 'http://localhost:5984/offline'
-  }
+  };
 
   if (environment === 'production') {
-    ENV.remoteDb = '';
+    ENV.emberPouch.remoteDb = '';
   }
+
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' " + ENV.emberPouch.remoteDb.substring(0, ENV.emberPouch.remoteDb.indexOf('/', 9))
+  };
 
   return ENV;
 };
