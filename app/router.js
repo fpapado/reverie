@@ -10,6 +10,7 @@ const AppRouter = Router.extend({
 
 AppRouter.map(function() {
   this.route('notes');
+  this.route('about');
 });
 
 export default AppRouter;
