@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'reverie',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash', // Using hash location type because it is more friendly for offline; taken from HospitalRun
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -23,12 +23,30 @@ module.exports = function(environment) {
     }
   };
 
+  // ENV.manifest = {
+  //   enabled: true,
+  //   appcacheFile: '/manifest.appcache',
+  //   excludePaths: ['index.html', 'tests/index.html', 'robots.txt', 'crossdomain.xml', 'testem.js'],
+  //   showCreateDate: true
+  // };
+
+  ENV.serviceWorker = {
+    enabled: true,
+    debug: true
+    // excludePaths: ['manifest.appcache'],
+    // swIncludeFiles: [
+    //   'node_modules/pouchdb/dist/pouchdb.js'
+    // ]
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.serviceWorker.debug = false;
   }
 
   if (environment === 'test') {
