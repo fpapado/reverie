@@ -1,5 +1,9 @@
 export default function() {
+  this.urlPrefix = 'http://localhost:5984';
+  this.passthrough();
+
   this.namespace = '/api';
+  this.urlPrefix = '';
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
 
   this.get('/notes', function() {

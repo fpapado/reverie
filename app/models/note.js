@@ -3,8 +3,9 @@ import DS from 'ember-data';
 const { Model, attr } = DS;
 
 export default Model.extend({
-  title: attr(),
-  author: attr(),
-  category: attr(),
-  content: attr()
+  title: attr('string'),
+  author: attr('string'),
+  category: attr('string'),
+  content: attr('string'),
+  rev: attr('string')
 });

@@ -34,12 +34,15 @@
     "ember-composable-helpers": "1.1.2",
     "ember-data": "^2.10.0",
     "ember-export-application-global": "^1.0.5",
+    "ember-getowner-polyfill": "1.0.1",
     "ember-load-initializers": "^0.5.1",
+    "ember-pouch": "4.2.1",
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.3",
     "eslint": "^3.11.1",
     "eslint-plugin-ember-suave": "^1.0.0",
     "loader.js": "^4.0.10",
+    "pouchdb": "^6.0.7",
     "tachyons": "^4.5.5"
   },
   "engines": {
