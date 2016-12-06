@@ -6,25 +6,34 @@ export default function() {
     return {
       data: [
         {
+          type: 'notes',
           id: 'my-first-teambuilding',
-          title: 'My first Teambuilding',
-          author: 'Fotis Papado',
-          category: 'teambuilding',
-          content: 'OMG Amazing'
+          attributes: {
+            title: 'My first Teambuilding',
+            author: 'Fotis Papado',
+            category: 'teambuilding',
+            content: 'OMG Amazing'
+          }
         },
         {
+          type: 'notes',
           id: 'my-first-commitee-work',
-          title: 'My first Committee Work',
-          author: 'Fotis Papado',
-          category: 'committeework',
-          content: 'Be the change you want to see in the world.'
+          attributes: {
+            title: 'My first Committee Work',
+            author: 'Fotis Papado',
+            category: 'committeework',
+            content: 'Be the change you want to see in the world.'
+          }
         },
         {
+          type: 'notes',
           id: 'party-time',
-          title: 'Party time',
-          author: 'Fotis Papado',
-          category: 'evening',
-          content: 'Whoo, partay!'
+          attributes: {
+            title: 'Party time',
+            author: 'Fotis Papado',
+            category: 'evening',
+            content: 'Whoo, partay!'
+          }
         }
       ]
     };
