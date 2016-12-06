@@ -2,9 +2,13 @@
 
 <ul class="list ph0">
   {{#each notes as |note|}}
-    <article class="mb4 note">
-      <h3 class="f3 fw5 mt0 mb2 lh-title note-title baskerville">{{note.title}}</h3>
-      <div class="f5 mb2 lh-copy note-content">
+    <article class="pa4 mb3 bg-near-white note">
+      <h3 class="f3 fw5 mt0 mb3 lh-title note-title baskerville">
+        <a class="dim link blue bw1 bb">
+        {{note.title}}
+        </a>
+      </h3>
+      <div class="f5 mb3 lh-copy note-content">
         {{note.content}}
       </div>
       <div class="f6 note-author">
