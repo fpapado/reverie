@@ -9,7 +9,9 @@ const AppRouter = Router.extend({
 });
 
 AppRouter.map(function() {
-  this.route('notes', function() {});
+  this.route('notes', function() {
+    this.route('new');
+  });
   this.route('about');
 });
 
