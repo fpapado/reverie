@@ -24,8 +24,6 @@ function createDb() {
   return db;
 }
 
-PouchDB.debug.enable('*');
-
 export default Adapter.extend({
   init() {
     this._super(...arguments);
