@@ -1,22 +1,25 @@
-<h2>New Note</h2>
-<form {{action "createNote" on="submit"}}>
-  <div class="form-group">
-    <label>Title</label>
-    {{input value=note-title class="form-control"}}
+<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">New Note</h2>
+<form class="black-80" {{action "createNote" on="submit"}}>
+  <div class="measure center">
+    <div class="mb4 form-group">
+      <label for="title" class="f6 b db mb2">Title</label>
+      {{input value=note-title class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
+    </div>
+    <div class="mb4 form-group">
+      <label for="author" class="f6 b db mb2">Author</label>
+      {{input value=note-author class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
+    </div>
+    <div class="mb4 form-group">
+      <label for="category" class="f6 b db mb2">Category</label>
+      {{input value=note-category class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
+    </div>
+    <div class="mb4 form-group">
+      <label for="content" class="f6 b db mb2">Content</label>
+      {{textarea value=note-content class="db border-box hover-black w-100 measure ba b--black-20 pa2 mb2 form-control"}}
+    </div>
+    <input type="submit" value="Add Note"
+      class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-white hover-bg-light-blue black-80 hover-white">
   </div>
-  <div class="form-group">
-    <label>Author</label>
-    {{input value=note-author class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label>Category</label>
-    {{input value=note-category class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label>Content</label>
-    {{input value=note-content class="form-control"}}
-  </div>
-  <input type="submit" value="Add Note" class="btn btn-primary">
 </form>
 
 {{outlet}}
