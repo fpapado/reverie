@@ -33,7 +33,7 @@ module.exports = function(environment) {
   ENV.serviceWorker = {
     enabled: true,
     debug: true,
-    excludePaths: ['manifest.appcache'],
+    excludePaths: ['index.html', 'manifest.appcache']
     // swIncludeFiles: [
     //   'node_modules/pouchdb/dist/pouchdb.js'
     // ]
@@ -63,11 +63,12 @@ module.exports = function(environment) {
   // Default ember-pouch config for dev
   ENV.emberPouch = {
     localDb: 'local_pouch',
-    remoteDb: 'http://localhost:5984/offline',
+    remoteDb: 'http://localhost:5984/offline'
   };
 
   if (environment === 'production') {
-    ENV.emberPouch.remoteDb = 'https://fpapado.cloudant.com/reverie';
+    // ENV.emberPouch.remoteDb = 'https://fpapado.cloudant.com/reverie';
+    ENV.emberPouch.remoteDb = '';
   }
 
   ENV.contentSecurityPolicy = {
