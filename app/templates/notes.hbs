@@ -1,5 +1,5 @@
 <!-- app/templates/notes/new.hbs -->
-<div class="col-md-3">
+<div class="">
  <h2>New Note</h2>
  <form {{action "createNote" on="submit"}}>
    <div class="form-group">
@@ -21,5 +21,13 @@
    <input type="submit" value="Add Note" class="btn btn-primary">
  </form>
 </div>
-{{notes-list title="My Notes" notes=model}}
+
+<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">My Notes</h2>
+
+<ul class="list ph0">
+  {{#each model as |note|}}
+    <li>{{note-details note=note}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
