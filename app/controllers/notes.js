@@ -16,10 +16,10 @@ export default Controller.extend({
         () => { }
       );
 
-      // this.set('note-title', '');
-      // this.set('note-author', '');
-      // this.set('note-category', '');
-      // this.set('note-content', '');
+      this.set('note-title', '');
+      this.set('note-author', '');
+      this.set('note-category', '');
+      this.set('note-content', '');
     }
   }
 });
