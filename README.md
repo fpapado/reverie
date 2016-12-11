@@ -23,7 +23,7 @@ Google](https://developers.google.com/web/progressive-web-apps/).
 Finally, there are a few ways of implementing Service Workers in Ember.
 I went with
 [broccoli-serviceworker](https://github.com/jkleinsc/broccoli-serviceworker),
-but ther might be more powerful tools in the future.
+but there might be more powerful tools in the future.
 
 ## Prerequisites
 
