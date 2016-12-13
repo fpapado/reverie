@@ -1,5 +1,5 @@
 <h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">New Note</h2>
-<form class="black-80" {{action "createNote" on="submit"}}>
+<form class="black-80" onsubmit={{perform createNote}}>
   <div class="measure center">
     <div class="mb4 form-group">
       <label for="title" class="f6 b db mb2">Title</label>
@@ -17,8 +17,13 @@
       <label for="content" class="f6 b db mb2">Content</label>
       {{textarea value=note-content class="db border-box hover-black w-100 measure ba b--black-20 pa2 mb2 form-control"}}
     </div>
-    <input type="submit" value="Add Note"
-      class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-white hover-bg-light-blue black-80 hover-white">
+    {{#if createNote.isIdle}}
+      <input type="submit" value="Add Note"
+        class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-white hover-bg-light-blue black-80 hover-white">
+    {{else}}
+      <input type="submit" value="Processing..."
+        class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-light-blue white">
+    {{/if}}
   </div>
 </form>
 
