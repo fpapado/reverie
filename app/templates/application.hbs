@@ -1,3 +1,8 @@
+{{#ember-notify as |message close|}}
+  <a {{action close}} class='close red'>x</a>
+  <span class='message-from-block black-80'>{{message.text}}</span>
+{{/ember-notify}}
+
 <header class="bg-white black-80 tc pv4 avenir">
   <h1 class="mt2 mb0 baskerville i fw1 f1">Reverie</h1>
   <h2 class="mt2 mb0 f6 fw4 ttu tracked">Moments, places, people</h2>

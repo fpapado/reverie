@@ -1,10 +1,13 @@
 import Ember from 'ember';
 import { task } from 'ember-concurrency';
 
-const { Controller } = Ember;
+const { Controller, inject } = Ember;
 
 export default Controller.extend({
+  notify: inject.service('notify'),
+
   createNote: task(function* () {
+    let notify = this.get('notify');
     let note = this.get('store').createRecord('note', {
       title: this.get('note-title'),
       author: this.get('note-author'),
@@ -14,6 +17,7 @@ export default Controller.extend({
 
     yield note.save();
 
+    notify.info('Note saved!');
     this.set('note-title', '');
     this.set('note-author', '');
     this.set('note-category', '');
