@@ -16,8 +16,8 @@ export default function() {
             title: 'Make a new friend',
             category: 'Social',
             description: 'Make a new friend, then take a photo and approach an official for confirmation',
-            hasUserCompleted: 'false',
-            badgeUrl: 'https://backpack.openbadges.org/images/backpack-logo-mono.png'
+            completed: false,
+            url: 'https://backpack.openbadges.org/images/backpack-logo-mono.png'
           }
         }
       ]

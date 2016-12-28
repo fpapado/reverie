@@ -13,6 +13,7 @@ AppRouter.map(function() {
     this.route('new');
   });
   this.route('about');
+  this.route('stickers');
 });
 
 export default AppRouter;
