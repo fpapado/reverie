@@ -6,6 +6,24 @@ export default function() {
   this.urlPrefix = '';
   // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
 
+  this.get('stickers', function() {
+    return {
+      data: [
+        {
+          type: 'stickers',
+          id: 'make-a-friend',
+          attributes: {
+            title: 'Make a new friend',
+            category: 'Social',
+            description: 'Make a new friend, then take a photo and approach an official for confirmation',
+            hasUserCompleted: 'false',
+            badgeUrl: 'https://backpack.openbadges.org/images/backpack-logo-mono.png'
+          }
+        }
+      ]
+    };
+  });
+
   this.get('/notes', function() {
     return {
       data: [
