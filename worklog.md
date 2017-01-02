@@ -17,3 +17,5 @@ Later:
 Markdown parsing
 Adding images to notes
 REST API for sharing, stickers etc.
+Awarding stickers to other users
+Smoke-and-mirrors list rendering
