@@ -1,4 +1,6 @@
-# reverie
+# Reverie
+[![Build
+Status](https://travis-ci.org/fpapado/reverie.svg?branch=master)](https://travis-ci.org/fpapado/reverie)
 
 WIP
 
