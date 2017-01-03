@@ -1,0 +1,17 @@
+<div class="card-content">
+  {{#if title}}
+    <span class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">
+      {{title}}
+    </span>
+  {{/if}}
+  {{yield}}
+</div>
+{{#if attrs.onsubmit}}
+  <div class="card-action right-align">
+    <button disabled={{buttonDisabled}} class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-white hover-bg-light-blue black-80 hover-white
+    {{if buttonDisabled "o-50 disabled" ""}}"
+      onclick={{attrs.onsubmit}}>
+      {{buttonText}}
+    </button>
+  </div>
+{{/if}}
