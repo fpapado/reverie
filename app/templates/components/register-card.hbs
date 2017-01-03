@@ -4,18 +4,24 @@
   buttonText='Sign up'}}
   <div class="mb3">
     {{rev-input
+      value=model.email
+      errors=(v-get model 'email' 'messages')
       classNames=''
       type='email'
       label='Username'}}
   </div>
   <div class="mb3">
     {{rev-input
+      value=model.password
+      errors=(v-get model 'password' 'messages')
       classNames=''
       type='password'
       label='Password'}}
   </div>
   <div class="mb3">
     {{rev-input
+      value=model.passwordConfirmation
+      errors=(v-get model 'passwordConfirmation' 'messages')
       classNames=''
       type='password'
       label='Confirm Password'}}

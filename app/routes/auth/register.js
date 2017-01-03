@@ -7,5 +7,8 @@ export default Route.extend({
     doRegister() {
       alert('registration attempted');
     }
+  },
+  model() {
+    return this.store.createRecord('user');
   }
 });
