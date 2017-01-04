@@ -4,6 +4,7 @@
 
 .ember-notify-default .ember-notify {
   border: none;
+  padding: 1rem;
 }
 
 .ember-notify-default .info {

@@ -1,13 +1,20 @@
 import Ember from 'ember';
 
-const { Route } = Ember;
+const { Route, inject } = Ember;
 
 export default Route.extend({
+  notify: inject.service(),
   actions: {
     doRegister() {
       this.get('currentModel').save()
         .then(() => {
+          // Successfully saved
           this.transitionTo('auth.login');
+          this.get('notify').success('Registered! Please log in now :)');
+        })
+        .catch((resp) => {
+          let { errors } = resp;
+          this.get('notify').error(errors.mapBy('detail').join(', '));
         });
     }
   },
