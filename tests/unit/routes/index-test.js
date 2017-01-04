@@ -9,12 +9,3 @@ test('it exists', function(assert) {
   let route = this.subject();
   assert.ok(route);
 });
-
-test('should transition to notes route', function(assert) {
-  let route = this.subject({
-    replaceWith(routeName) {
-      assert.equal(routeName, 'notes', 'replace with route name notes');
-    }
-  });
-  route.beforeModel();
-});
