@@ -13,6 +13,11 @@ AppRouter.map(function() {
     this.route('new');
   });
   this.route('about');
+
+  this.route('auth', function() {
+    this.route('login');
+    this.route('register');
+  });
 });
 
 export default AppRouter;

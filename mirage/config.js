@@ -1,5 +1,10 @@
 export default function() {
+  // Local CouchDB passthrough
   this.urlPrefix = 'http://localhost:5984';
+  this.passthrough();
+
+  // Local Phoenix server passthrough
+  this.urlPrefix = 'http://localhost:4000';
   this.passthrough();
 
   this.namespace = '/api';
