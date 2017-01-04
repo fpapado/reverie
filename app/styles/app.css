@@ -3,6 +3,15 @@
 }
 
 .ember-notify-default .ember-notify {
-  border-color: rgb(150, 204, 255);
-  border-width: .125rem;
+  border: none;
+}
+
+.ember-notify-default .info {
+  background-color: rgb(150, 204, 255);
+}
+.ember-notify-default .success {
+  background-color: #578F88;
+}
+.ember-notify-default .error {
+  background-color: #B05746;
 }
