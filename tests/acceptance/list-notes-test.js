@@ -3,13 +3,6 @@ import moduleForAcceptance from 'reverie/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | list notes');
 
-test('should redirect to notes route.', function(assert) {
-  visit('/');
-  andThen(function() {
-    assert.equal(currentURL(), '/notes', 'should redirect automatically');
-  });
-});
-
 test('should link to information about the app.', function(assert) {
   visit('/');
   click('a:contains("About")');
