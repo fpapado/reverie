@@ -25,7 +25,7 @@ export default Route.extend({
       }
     }).then((raw) => {
       return raw.json().then((data) => {
-        let currentUser = this.store.pus(data);
+        let currentUser = this.store.push(data);
         this.set('session.currentUser', currentUser);
       });
     });
