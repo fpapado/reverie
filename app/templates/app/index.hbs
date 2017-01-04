@@ -1,0 +1,12 @@
+<div class="">
+  {{#rev-card
+    buttonText='Logout'
+    onsubmit=(route-action 'logout')
+    title='Welcome to Reverie!'}}
+
+    {{#rev-user-info as |user|}}
+      Thanks for logging in <b>{{user.email}}</b>
+    {{/rev-user-info}}
+
+  {{/rev-card}}
+</div>

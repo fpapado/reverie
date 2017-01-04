@@ -1,1 +1,13 @@
+<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">Welcome to Reverie!</h2>
+<div class="pa4 mb3 bg-near-white note avenir tc">
+  <p class="db">
+    You can register or go straight to notes.
+  </p>
+  {{link-to "Register" "auth.register"
+  class="dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+
+  {{link-to "See Notes" "notes.index"
+  class="dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+</div>
+
 {{outlet}}

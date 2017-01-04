@@ -1,4 +1,6 @@
 Up next:
+Signup/in ember-concurrency tasks
+
 Validations for forms (ember-changesets)
 
 Note single view
