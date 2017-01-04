@@ -7,7 +7,7 @@
   <div class="mb3">
     {{rev-input
       value=model.email
-      errors=(v-get model 'email' 'messages')
+      errors=(v-get this 'model.email' 'messages')
       classNames=''
       type='email'
       label='Username'}}
@@ -15,9 +15,9 @@
   <div class="mb3">
     {{rev-input
       value=model.password
-      errors=(v-get model 'password' 'messages')
+      errors=(v-get this 'model.password' 'messages')
       classNames=''
-      type='password'
+      type='text'
       label='Password'}}
   </div>
 {{/rev-card}}

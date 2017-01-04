@@ -1,11 +1,13 @@
 {{#rev-card
   onsubmit=attrs.onsubmit
   title='Sign up for Reverie'
-  buttonText='Sign up'}}
+  buttonText='Sign up'
+  buttonDisabled=validations.messages.length}}
+
   <div class="mb3">
     {{rev-input
       value=model.email
-      errors=(v-get model 'email' 'messages')
+      errors=(v-get this 'model.email' 'messages')
       classNames=''
       type='email'
       label='Username'}}
@@ -13,7 +15,7 @@
   <div class="mb3">
     {{rev-input
       value=model.password
-      errors=(v-get model 'password' 'messages')
+      errors=(v-get this 'model.password' 'messages')
       classNames=''
       type='password'
       label='Password'}}
@@ -21,7 +23,7 @@
   <div class="mb3">
     {{rev-input
       value=model.passwordConfirmation
-      errors=(v-get model 'passwordConfirmation' 'messages')
+      errors=(v-get this 'model.passwordConfirmation' 'messages')
       classNames=''
       type='password'
       label='Confirm Password'}}

@@ -2,15 +2,21 @@
   data-error={{_errorMessages}}>
   {{label}}{{yield}}
 </label>
-<span>{{errors}}</span>
+
 <input type="{{type}}"
   value="{{value}}"
-  class="{{if value
+  class="input-reset db mb2 pa2 w-100 ba b--black-20
+  {{if value
     (concat
       "validate "
-      (if errors.length "invalid" "valid")
+      (if errors.length "invalid b--red bw1" "valid")
       )
-    }}
-    input-reset db mb2 pa2 w-100 ba b--black-20"
+    }}"
   onkeyup={{action (mut value) value='target.value'}}
   onchange={{action (mut value) value='target.value'}}>
+
+{{#if value}}
+  <span class="db f6 red">
+    {{_errorMessages}}
+  </span>
+{{/if}}
