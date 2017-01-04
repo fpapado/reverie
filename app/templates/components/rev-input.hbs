@@ -1,0 +1,22 @@
+<label class="db mb2 f6 b"
+  data-error={{_errorMessages}}>
+  {{label}}{{yield}}
+</label>
+
+<input type="{{type}}"
+  value="{{value}}"
+  class="input-reset db mb2 pa2 w-100 ba b--black-20
+  {{if value
+    (concat
+      "validate "
+      (if errors.length "invalid b--red bw1" "valid")
+      )
+    }}"
+  onkeyup={{action (mut value) value='target.value'}}
+  onchange={{action (mut value) value='target.value'}}>
+
+{{#if value}}
+  <span class="db f6 red">
+    {{_errorMessages}}
+  </span>
+{{/if}}

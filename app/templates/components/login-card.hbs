@@ -1,0 +1,23 @@
+{{#rev-card
+  onsubmit=attrs.onsubmit
+  title='Log in to Reverie'
+  buttonText='Login'
+  buttonDisabled=validations.messages.length}}
+
+  <div class="mb3">
+    {{rev-input
+      value=model.email
+      errors=(v-get this 'model.email' 'messages')
+      classNames=''
+      type='email'
+      label='Username'}}
+  </div>
+  <div class="mb3">
+    {{rev-input
+      value=model.password
+      errors=(v-get this 'model.password' 'messages')
+      classNames=''
+      type='text'
+      label='Password'}}
+  </div>
+{{/rev-card}}
