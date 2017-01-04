@@ -1,6 +1,6 @@
-{{#ember-notify as |message close|}}
-  <a {{action close}} class='close red'>x</a>
-  <span class='message-from-block black-80'>{{message.text}}</span>
+{{#ember-notify closeAfter=5000 as |message close|}}
+  <a {{action close}} class='close black-60'>x</a>
+  <span class='message-from-block white'>{{message.text}}</span>
 {{/ember-notify}}
 
 <header class="bg-white black-80 tc pv4 avenir">
