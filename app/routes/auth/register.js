@@ -5,7 +5,10 @@ const { Route } = Ember;
 export default Route.extend({
   actions: {
     doRegister() {
-      alert('registration attempted');
+      this.get('currentModel').save()
+        .then(() => {
+          this.transitionTo('auth.login');
+        });
     }
   },
   model() {
