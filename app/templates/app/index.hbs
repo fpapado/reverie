@@ -2,12 +2,11 @@
   {{#rev-card
     buttonText='Logout'
     onsubmit=(route-action 'logout')
-    title='Welcome to Reverie!'
+    title='Welcome to Reverie!'}}
 
-    {{#user-info as |user|}}
+    {{#rev-user-info as |user|}}
       Thanks for logging in <b>{{user.email}}</b>
-    {{/user-info}}
-  }}
+    {{/rev-user-info}}
 
   {{/rev-card}}
 </div>
