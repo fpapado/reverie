@@ -74,7 +74,8 @@ module.exports = function(environment) {
   // Default ember-pouch config for dev
   ENV.emberPouch = {
     localDb: 'local_pouch',
-    remoteDb: 'http://localhost:5984/offline'
+    remoteDb: ''
+    // remoteDb: 'http://localhost:5984/offline'
   };
 
   if (environment === 'production') {
