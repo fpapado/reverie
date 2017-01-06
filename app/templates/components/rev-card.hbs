@@ -6,23 +6,27 @@
 <div class="measure center">
   {{yield}}
 
+  {{#if attrs.task}}
+    {{# if attrs.task.isIdle}}
+        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
+        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
+          onclick={{perform attrs.task}}>
+          {{buttonText}}
+        </button>
+    {{else}}
+        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
+        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
+          onclick={{perform attrs.task}}>
+          Processing
+        </button>
+    {{/if}}
+  {{/if}}
+
   {{#if attrs.onsubmit}}
-    <div class="card-action right-align">
-      {{#if attrs.onsubmit.isIdle}}
         <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
         {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
           onclick={{attrs.onsubmit}}>
           {{buttonText}}
         </button>
-      {{else}}
-        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
-        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
-          onclick={{attrs.onsubmit}}>
-          Processing
-        </button>
-      {{/if}}
-
-    </div>
   {{/if}}
-
 </div>
