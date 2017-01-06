@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { task, timeout } from 'ember-concurrency';
+import { task } from 'ember-concurrency';
 
 const { Controller, inject } = Ember;
 
@@ -17,8 +17,8 @@ export default Controller.extend({
             user.email,
             user.password
             );
-        // Success
-        this.get('notify').success('Logged In!');
+      // Success
+      yield this.get('notify').success('Logged In!');
 
     } catch(e) {
       let { errors } = e;

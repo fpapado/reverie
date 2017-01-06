@@ -1,5 +1,5 @@
 {{#rev-card
-  onsubmit=attrs.onsubmit
+  task=attrs.task
   title='Sign up for Reverie'
   buttonText='Sign up'
   buttonDisabled=validations.messages.length}}
@@ -12,6 +12,7 @@
       type='email'
       label='Email'}}
   </div>
+
   <div class="mb3">
     {{rev-input
       value=model.password
@@ -21,6 +22,7 @@
       label='Password'
       subLabel='Must be between 8-24 characters'}}
   </div>
+
   <div class="mb3">
     {{rev-input
       value=model.passwordConfirmation
