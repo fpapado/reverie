@@ -6,7 +6,7 @@ export default Route.extend({
   notify: inject.service(),
   actions: {
     doRegister() {
-      this.get('currentModel').save()
+      this.modelFor(this.routeName).save()
         .then(() => {
           // Successfully saved
           this.transitionTo('auth.login');
