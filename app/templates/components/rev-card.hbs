@@ -13,10 +13,10 @@
       text=buttonText}}
     {{/rev-task-button}}
   {{else}}
-    {{#if attrs.task}}
+    {{#if attrs.onsubmit}}
       {{#rev-action-button
         isDisabled=buttonDisabled
-        action=attrs.action}}
+        action=attrs.onsubmit}}
         {{buttonText}}
       {{/rev-action-button}}
     {{/if}}
