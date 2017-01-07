@@ -7,26 +7,18 @@
   {{yield}}
 
   {{#if attrs.task}}
-    {{# if attrs.task.isIdle}}
-        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
-        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
-          onclick={{perform attrs.task}}>
-          {{buttonText}}
-        </button>
-    {{else}}
-        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
-        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
-          onclick={{perform attrs.task}}>
-          Processing
-        </button>
+    {{#rev-task-button
+      isDisabled=buttonDisabled
+      task=attrs.task
+      text=buttonText}}
+    {{/rev-task-button}}
+  {{else}}
+    {{#if attrs.task}}
+      {{#rev-action-button
+        isDisabled=buttonDisabled
+        action=attrs.action}}
+        {{buttonText}}
+      {{/rev-action-button}}
     {{/if}}
-  {{/if}}
-
-  {{#if attrs.onsubmit}}
-        <button disabled={{buttonDisabled}} class="input-reset dib mr3 f5 pa3 link bw1 ba b--light-blue bg-white black-80
-        {{if buttonDisabled "o-50 disabled" "pointer bg-animate hover-white hover-bg-light-blue"}}"
-          onclick={{attrs.onsubmit}}>
-          {{buttonText}}
-        </button>
   {{/if}}
 </div>
