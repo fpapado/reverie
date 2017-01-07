@@ -1,5 +1,5 @@
 {{#rev-card
-  onsubmit=attrs.onsubmit
+  task=attrs.task
   title='Log in to Reverie'
   buttonText='Login'
   buttonDisabled=validations.messages.length}}
@@ -10,8 +10,9 @@
       errors=(v-get this 'model.email' 'messages')
       classNames=''
       type='email'
-      label='Username'}}
+      label='Email'}}
   </div>
+
   <div class="mb3">
     {{rev-input
       value=model.password
