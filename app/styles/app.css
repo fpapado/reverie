@@ -16,3 +16,11 @@
 .ember-notify-default .error {
   background-color: #B05746;
 }
+
+.hover-b--light-blue:hover {
+  border-color: #96ccff;
+}
+
+.hover-b--light-blue:focus {
+  border-color: #96ccff;
+}

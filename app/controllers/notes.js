@@ -15,6 +15,7 @@ export default Controller.extend({
       content: this.get('note-content')
     });
 
+    // TODO: add try-catch
     yield note.save();
 
     notify.info('Note saved!');

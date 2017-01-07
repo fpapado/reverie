@@ -17,13 +17,10 @@
       <label for="content" class="f6 b db mb2">Content</label>
       {{textarea value=note-content class="db border-box hover-black w-100 measure ba b--black-20 pa2 mb2 form-control"}}
     </div>
-    {{#if createNote.isIdle}}
-      <input type="submit" value="Add Note"
-        class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-white hover-bg-light-blue black-80 hover-white">
-    {{else}}
-      <input type="submit" value="Processing..."
-        class="pointer input-reset dib mr3 f5 pa3 link bw1 ba bg-animate b--light-blue bg-light-blue white">
-    {{/if}}
+    {{rev-task-button
+      text="Add Note"
+      task=createNote
+      isDisabled=null}}
   </div>
 </form>
 
