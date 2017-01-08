@@ -7,14 +7,41 @@ export default Route.extend({
   session: inject.service(),
 
   actions: {
+    getUserSpecified(){
+      // Get the "new sticker" model
+      let data = this.modelFor(this.routeName).newSticker;
+
+      // GET to /users/5
+      this.get('store').findRecord('user', 5)
+        .then(function(user){
+          console.log(user);
+      });
+
+      // GET to /users
+      this.get('store').findAll('user')
+        .then(function(users){
+          console.log(users);
+      });
+
+      // GET to /users?filter[email]=fotis.lok@hotmail.com
+      this.get('store').query('user', {
+        filter: {
+          email: 'fotis.lok@hotmail.com'
+        }
+      }).then(function(users){
+        receiver = users.get("firstObject");
+        console.log(receiver);
+      });
+    },
     createSticker() {
       // Get the new sticker model
       let data = this.modelFor(this.routeName).newSticker;
 
-      console.log(data.receiver);
+      // Create receiver record
+      let receiver = {};
 
       // Create an Ember-Data record
-      let sticker = this.store.createRecord('sticker', {title: data.title, receiver: this.get('session').currentUser});
+      let sticker = this.store.createRecord('sticker', {title: data.title, receiver: receiver});
 
       // Clear existing errors
       set(this.modelFor(this.routeName).newSticker, 'errors', []);
