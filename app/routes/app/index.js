@@ -7,56 +7,43 @@ export default Route.extend({
   session: inject.service(),
 
   actions: {
-    getUserSpecified(){
+    createSticker() {
       // Get the "new sticker" model
       let data = this.modelFor(this.routeName).newSticker;
 
-      // GET to /users/5
-      this.get('store').findRecord('user', 5)
-        .then(function(user){
-          console.log(user);
-      });
+      // Create an Ember-Data record for new sticker
+      let sticker = this.store.createRecord('sticker', {title: data.title});
 
-      // GET to /users
-      this.get('store').findAll('user')
-        .then(function(users){
-          console.log(users);
-      });
-
-      // GET to /users?filter[email]=fotis.lok@hotmail.com
+      // Get receiver record from API
       this.get('store').query('user', {
         filter: {
-          email: 'fotis.lok@hotmail.com'
+          email: data.receiver
         }
-      }).then(function(users){
-        receiver = users.get("firstObject");
-        console.log(receiver);
-      });
-    },
-    createSticker() {
-      // Get the new sticker model
-      let data = this.modelFor(this.routeName).newSticker;
+      }).then((users) => {
+        let rec = users.get('firstObject');
 
-      // Create receiver record
-      let receiver = {};
+        if (!rec) {
+          // model.errors only shows server- errors; we notify the user here
+          this.get('notify').error('There user you specified was not found :(');
+          throw (new Error('User not found'));
+        }
 
-      // Create an Ember-Data record
-      let sticker = this.store.createRecord('sticker', {title: data.title, receiver: receiver});
+        sticker.set('receiver', rec);
 
-      // Clear existing errors
-      set(this.modelFor(this.routeName).newSticker, 'errors', []);
+        // Clear existing errors
+        set(this.modelFor(this.routeName).newSticker, 'errors', []);
 
-      sticker.save().then(() => {
+        return sticker.save();
+      }).then(() => {
         // Notify user
-        this.get('notify').success(`Sent sticker ${data.title} to ${data.receiver}`);
-        // Reset input
-        this.modelFor(this.routeName).newSticker.title = '';
-        this.modelFor(this.routeName).newSticker.receiver = '';
+        this.get('notify').success(`Sent sticker to ${data.receiver}!`);
 
+        // Reset input
+        set(this.modelFor(this.routeName).newSticker, 'title', '');
+        set(this.modelFor(this.routeName).newSticker, 'receiver', '');
       }).catch((err) => {
         // Unload record, pass errors to UI
         this.store.unloadRecord(sticker);
-
         set(this.modelFor(this.routeName).newSticker, 'errors',
             (err.errors || []).mapBy('detail'));
 

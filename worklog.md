@@ -1,13 +1,14 @@
 Sticker todo:
-1) Fix sticker sending
-
 2) Factor functionality out into /stickers and /stickers/send routes
-  Convert sticker creation actions into tasks
 
-3) Add loading indicator for model hook, since it is a slower compound promise.
+3) Convert sticker creation actions into tasks
+
+4) Add loading indicator for model hook, since it is a slower compound promise.
   Alternatively, do loading on a per-sticker basis, using the LinkedIn method.
 
-4) Add info button
+5) Add info to routes
+
+6) Handle offline case for stickers?
 
 Up next:
 Signup/in ember-concurrency tasks
