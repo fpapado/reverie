@@ -15,10 +15,10 @@ export default Route.extend({
       let sticker = this.store.createRecord('sticker', {title: data.title});
 
       // Get receiver record from API
+      // An alternative is query('user', {filter: { email: data.receiver}})
+      // but we have deprecated it for now
       this.get('store').query('user', {
-        filter: {
-          email: data.receiver
-        }
+        email: data.receiver
       }).then((users) => {
         let rec = users.get('firstObject');
 
