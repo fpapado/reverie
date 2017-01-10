@@ -1,31 +1,4 @@
-<div>
-  {{#rev-card
-    buttonText='Send Sticker'
-    onsubmit=(route-action 'createSticker')
-    title='Send a sticker!'}}
-
-    <div class="mb3">
-      {{rev-input
-        value=model.newSticker.receiver
-        classNames=''
-        type='email'
-        label='Receiver email'}}
-    </div>
-
-    <div class="mb3">
-      {{rev-input
-        value=model.newSticker.title
-        classNames=''
-        type=''
-        label='Title'}}
-    </div>
-
-    {{#if model.newSticker.errors}}
-      <div class="mb3">
-        {{#each model.newSticker.errors as |error|}}
-          <span class="db red mb2">{{error}}</span>
-        {{/each}}
-      </div>
-    {{/if}}
-  {{/rev-card}}
+<div class="">
+  {{sticker-card
+    model=model}}
 </div>
