@@ -2,22 +2,28 @@
   title='Send a sticker!'
   task=sendSticker
   buttonText='Send Sticker'
+  buttonDisabled=validations.messages.length
 }}
 
   <div class="mb3">
     {{rev-input
       value=model.newSticker.receiver
+      errors=(v-get this 'model.newSticker.receiver' 'messages')
       classNames=''
       type='email'
       label='Receiver email'}}
   </div>
 
   <div class="mb3">
-    {{rev-input
+    {{#rev-input
       value=model.newSticker.title
+      errors=(v-get this 'model.newSticker.title' 'messages')
       classNames=''
-      type=''
       label='Title'}}
+      <span class="fw5">
+        (150 characters max)
+      </span>
+    {{/rev-input}}
   </div>
 
   {{#if model.newSticker.errors}}

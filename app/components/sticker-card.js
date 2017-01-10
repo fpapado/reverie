@@ -1,9 +1,16 @@
 import Ember from 'ember';
 import { task } from 'ember-concurrency';
+import { email, message } from '../utils/user-validations';
+import { buildValidations } from 'ember-cp-validations';
 
 const { Component, inject, set } = Ember;
 
-export default Component.extend({
+const Validations = buildValidations({
+  'model.newSticker.receiver': email,
+  'model.newSticker.title': message
+});
+
+export default Component.extend(Validations, {
   notify: inject.service(),
   session: inject.service(),
   store: inject.service(),
@@ -59,5 +66,5 @@ export default Component.extend({
     // Reset input
     set(this.get('model').newSticker, 'title', '');
     set(this.get('model').newSticker, 'receiver', '');
-  })
+  }).drop()
 });

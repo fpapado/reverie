@@ -22,6 +22,12 @@ export const passwordConfirmation = [
   })
 ];
 
+export const message = [
+  validator('length', {
+    max: 150
+  })
+];
+
 export default {
   email, password, passwordConfirmation
 };
