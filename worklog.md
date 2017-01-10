@@ -1,24 +1,23 @@
 Sticker todo:
-2) Sideloading / query optimisation
-
 3) Convert sticker creation actions into tasks
 
 3b) Add validations to sticker sending
 
-4) Add loading indicator for model hook, since it is a slower compound promise.
+4) Style stickers
+
+5) Add loading indicator for model hook, since it is a slower compound promise.
   Alternatively, do loading on a per-sticker basis, using the LinkedIn method.
 
-5) Add info to routes
+6) Add info to routes
 
-6) Handle offline case for stickers?
+7) Handle offline case for stickers?
 
+Next Feature:
 Task-button spinner, blue bg, disable while processing
 
-Up next:
 Signup/in ember-concurrency tasks
 
-Validations for forms (ember-changesets)
-
+Later:
 Note single view
 Note edit view
 
