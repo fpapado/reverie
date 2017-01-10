@@ -1,10 +1,36 @@
-Up next:
+Next Features:
+Task-button spinner, blue bg, disable while processing
+
+Rev-input spice
+  Placeholder for rev-input
+  Fancy check marks etc.
+  star for required
+  optional (header|subtitle?)
+
+Log-in, log-out spot on menu
 Signup/in ember-concurrency tasks
 
-Validations for forms (ember-changesets)
 
-Note single view
-Note edit view
+Later:
+Better stickers (with API changes)
+  Sticker component
+    Add functionality / images
+    Style stickers
+  Make sticker message a text field
+  Add sticker power-select
+  Remove RSVP.hash and pass naked model
+  Make message = title, text field
+
+Handle offline case for stickers?
+
+Note Card component
+  Note single view
+  Note edit view
+Add info to routes, menu button
+
+
+Even Later:
+Some kind of notification system?
 
 CouchDB/PouchDB auth scheme
   (https://github.com/nolanlawson/pouchdb-authentication)
@@ -15,9 +41,6 @@ PouchDB conflict resolution
 PouchDB Import/Export (https://github.com/nolanlawson/pouchdb-replication-stream)
 (https://github.com/nolanlawson/pouchdb-load)
 
-Later:
 Markdown parsing
 Adding images to notes
-REST API for sharing, stickers etc.
-Awarding stickers to other users
 Smoke-and-mirrors list rendering
