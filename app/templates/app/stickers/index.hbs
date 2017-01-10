@@ -1,0 +1,15 @@
+<div class="mt4 mb4">
+  {{#rev-card
+    title='Your Stickers'}}
+    {{#each model.stickers as |sticker|}}
+      <div class="bg-light-gray black-80">
+        {{sticker.title}}
+        {{sticker.sender.email}}
+      </div>
+    {{else}}
+    <span class="db tc">
+      No stickers yet ☹️
+    </span>
+    {{/each}}
+  {{/rev-card}}
+</div>
