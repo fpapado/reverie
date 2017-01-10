@@ -1,12 +1,3 @@
-Sticker todo:
-4) Add validations to sticker sending
-Debounce
-Remove RSVP.hash and pass naked model
-Make message = title, text field
-
-6) Add info to routes, menu buttonn
-
-
 Next Features:
 Task-button spinner, blue bg, disable while processing
 
@@ -22,18 +13,25 @@ Signup/in ember-concurrency tasks
 
 Later:
 Better stickers (with API changes)
-  Style stickers
+  Sticker component
+    Add functionality / images
+    Style stickers
   Make sticker message a text field
   Add sticker power-select
+  Remove RSVP.hash and pass naked model
+  Make message = title, text field
 
 Handle offline case for stickers?
 
 Note Card component
   Note single view
   Note edit view
+Add info to routes, menu button
 
 
 Even Later:
+Some kind of notification system?
+
 CouchDB/PouchDB auth scheme
   (https://github.com/nolanlawson/pouchdb-authentication)
 User Auth for production

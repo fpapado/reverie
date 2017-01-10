@@ -1,15 +1,29 @@
-<div class="mt4 mb4">
+<div class="mb4">
   {{#rev-card
     title='Your Stickers'}}
+
+    <div class="mb3 pa3 bg-light-blue white">
+    <p>
+      Stickers are short messages that you can give to people at the session!
+      These are the ones that were sent to you. Perhaps you want to
+      {{#link-to 'app.stickers.send'
+        class="link bb bw1 white hover-mid-gray"
+      }}
+          send one?
+      {{/link-to}}
+    </p>
+    </div>
+
     {{#each model.stickers as |sticker|}}
-      <div class="bg-light-gray black-80">
-        {{sticker.title}}
-        {{sticker.sender.email}}
+      <div class="mb3 pa3 bg-light-gray black-80">
+        <span class="db">{{sticker.title}}</span>
+        <span class="db">by {{sticker.sender.email}}</span>
       </div>
     {{else}}
     <span class="db tc">
       No stickers yet ☹️
     </span>
     {{/each}}
+
   {{/rev-card}}
 </div>
