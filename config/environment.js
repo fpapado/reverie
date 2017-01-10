@@ -42,8 +42,6 @@ module.exports = function(environment) {
   };
 
   ENV.serviceWorker = {
-    enabled: true,
-    debug: true,
     excludePaths: ['index.html', 'manifest.appcache']
     // swIncludeFiles: [
     //   'node_modules/pouchdb/dist/pouchdb.js'
@@ -56,8 +54,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.enabled = false;
-    ENV.serviceWorker.debug = false;
+    ENV.serviceWorker.enabled = false;
+    ENV.serviceWorker.debug = true;
   }
 
   if (environment === 'test') {
