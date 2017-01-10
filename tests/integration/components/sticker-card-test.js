@@ -13,5 +13,5 @@ test('it renders', function(assert) {
   this.render(hbs`{{sticker-card}}`);
 
   assert.equal(this.$().text().trim().replace(/[\s\n]+/g, ''),
-    'Sendasticker!ReceiveremailTitleSendSticker');
+    'Sendasticker!ReceiveremailTitle(150charactersmax)SendSticker');
 });
