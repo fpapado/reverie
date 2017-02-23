@@ -1,46 +1,58 @@
-Next Features:
-Task-button spinner, blue bg, disable while processing
+# Next Feature:
+- New sticker model
+- Better stickers (with API changes)
+  - Sticker component
+    - Add functionality / images
+    - Style stickers
+  - Make sticker message a text field
+  - Add sticker category power-select
+  - Remove RSVP.hash and pass naked model?
+  - Make message = title, text field
 
-Rev-input spice
-  Placeholder for rev-input
-  Fancy check marks etc.
-  star for required
-  optional (header|subtitle?)
+# Visual / UX:
+- Task-button spinner, blue bg, disable while processing
+- Model hook loading spinner
 
-Log-in, log-out spot on menu
-Signup/in ember-concurrency tasks
+- Rev-input spice
+  - Placeholder for rev-input
+  - Fancy check marks etc.
+  - star for required
+  - optional (header|subtitle?)
 
+- Log-in, log-out spot on menu
+- Signup/in ember-concurrency tasks
 
-Later:
-Better stickers (with API changes)
-  Sticker component
-    Add functionality / images
-    Style stickers
-  Make sticker message a text field
-  Add sticker power-select
-  Remove RSVP.hash and pass naked model
-  Make message = title, text field
+# Later:
+- Handle offline case for stickers? (Do we need to change anything?)
 
-Handle offline case for stickers?
+- Note Card component
+  - Note single view
+  - Note edit view
+- Add "info" to routes, menu button
+- "Guest" author for notes
 
-Note Card component
-  Note single view
-  Note edit view
-Add info to routes, menu button
+# Style pass:
+- Design stickers
+- Ask JG for input
 
+# Documentation:
+- Screenshots for Github
+- Revamp about page
 
-Even Later:
-Some kind of notification system?
+# Even Later:
+- Some kind of notification system?
+- PouchDB Import/Export
+    (https://github.com/nolanlawson/pouchdb-replication-stream)
+    (https://github.com/nolanlawson/pouchdb-load)
+- Notes about import/export
 
-CouchDB/PouchDB auth scheme
+## If we use sync:
+- CouchDB/PouchDB auth scheme
   (https://github.com/nolanlawson/pouchdb-authentication)
-User Auth for production
+- User Auth for production
   (also, related back-end work; one db per user or a single one with something like https://github.com/cloudant-labs/envoy)
-PouchDB conflict resolution
+- PouchDB conflict resolution
 
-PouchDB Import/Export (https://github.com/nolanlawson/pouchdb-replication-stream)
-(https://github.com/nolanlawson/pouchdb-load)
-
-Markdown parsing
-Adding images to notes
-Smoke-and-mirrors list rendering
+- Markdown parsing
+- Adding images to notes
+- (Not necessary) Smoke-and-mirrors list rendering
