@@ -1,5 +1,6 @@
 # Next Feature:
-- New sticker model
+- Sticker send category, optional title
+  - Must query /categories first
 - Better stickers (with API changes)
   - Sticker component
     - Add functionality / images
@@ -10,6 +11,7 @@
   - Make message = title, text field
 
 # Visual / UX:
+- Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
 
