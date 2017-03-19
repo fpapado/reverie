@@ -1,16 +1,17 @@
 # Next Feature:
-- Sticker send category, optional title
-  - Must query /categories first
 - Better stickers (with API changes)
   - Sticker component
     - Add functionality / images
     - Style stickers
-  - Make sticker message a text field
-  - Add sticker category power-select
   - Remove RSVP.hash and pass naked model?
-  - Make message = title, text field
+    - Consider sequencing of category > sticker loading for received stickers
+  - Addition
+    - Make sticker message a text field
+    - Style sticker category field
+    - Sticker send validation second pass, e.g. "non empty string"
 
 # Visual / UX:
+- Log-in, log-out spot on menu
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
@@ -21,8 +22,8 @@
   - star for required
   - optional (header|subtitle?)
 
-- Log-in, log-out spot on menu
 - Signup/in ember-concurrency tasks
+  - Ditto for all routes, actually
 
 # Later:
 - Handle offline case for stickers? (Do we need to change anything?)
@@ -32,6 +33,7 @@
   - Note edit view
 - Add "info" to routes, menu button
 - "Guest" author for notes
+- Rename 'user-validations' to 'validations' if need be
 
 # Style pass:
 - Design stickers
@@ -42,6 +44,7 @@
 - Revamp about page
 
 # Even Later:
+- PouchDB logging off
 - Some kind of notification system?
 - PouchDB Import/Export
     (https://github.com/nolanlawson/pouchdb-replication-stream)

@@ -34,6 +34,10 @@ export const message = [
   })
 ];
 
+export const category = [
+  validator('presence', true)
+];
+
 export default {
-  email, password, passwordConfirmation, message
+  email, password, passwordConfirmation, message, category
 };

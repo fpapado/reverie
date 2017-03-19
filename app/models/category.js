@@ -1,9 +1,8 @@
 import DS from 'ember-data';
 
-const {attr, belongsTo, Model} = DS;
+const {attr, Model} = DS;
 
 export default Model.extend({
   title: attr('string'),
-  imgurl: attr('string'),
-  sticker: belongsTo('sticker')
+  imgurl: attr('string')
 });

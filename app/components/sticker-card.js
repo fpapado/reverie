@@ -1,12 +1,13 @@
 import Ember from 'ember';
 import { task } from 'ember-concurrency';
-import { email, message } from '../utils/user-validations';
+import { email, message, category } from '../utils/user-validations';
 import { buildValidations } from 'ember-cp-validations';
 
 const { Component, inject, set } = Ember;
 
 const Validations = buildValidations({
   'model.newSticker.receiver': email,
+  'model.newSticker.category': category,
   'model.newSticker.title': message
 });
 
@@ -20,10 +21,11 @@ export default Component.extend(Validations, {
     let data = this.get('model').newSticker;
 
     // Create an Ember-Data record for new sticker
-    let sticker = this.get('store').createRecord('sticker', {title: data.title});
+    let sticker = this.get('store').createRecord('sticker', {title: data.title, category: data.category});
     let users = [];
 
     // Get receiver record from API
+    // Could possibly use .queryRecord if we know the result is a single record
     try {
       users = yield this.get('store')
         .query('user', { email: data.receiver });
@@ -66,5 +68,6 @@ export default Component.extend(Validations, {
     // Reset input
     set(this.get('model').newSticker, 'title', '');
     set(this.get('model').newSticker, 'receiver', '');
+    set(this.get('model').newSticker, 'category', '');
   }).drop()
 });

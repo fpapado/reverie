@@ -4,14 +4,30 @@
   buttonText='Send Sticker'
   buttonDisabled=validations.messages.length
 }}
-
   <div class="mb3">
     {{rev-input
       value=model.newSticker.receiver
       errors=(v-get this 'model.newSticker.receiver' 'messages')
       classNames=''
       type='email'
-      label='Receiver email'}}
+      label='Receiver email*'}}
+  </div>
+
+  <div class="mb4">
+    <div class="mb2">
+      <label class="db mb1 f6 b"
+        data-error={{_errorMessages}}>
+        Sticker type*
+      </label>
+    </div>
+    {{#power-select
+      options=model.categories
+      selected=model.newSticker.category
+      onchange=(action (mut model.newSticker.category))
+      as |category|
+    }}
+    <img src="{{category.imgurl}}" class="dib h1 w1"> <strong>{{category.title}}</strong>
+    {{/power-select}}
   </div>
 
   <div class="mb3">
@@ -19,9 +35,10 @@
       value=model.newSticker.title
       errors=(v-get this 'model.newSticker.title' 'messages')
       classNames=''
-      label='Title'}}
+      searchEnabled=false
+      label='Message'}}
       <span class="fw5">
-        (150 characters max)
+        (Optional; 150 characters max)
       </span>
     {{/rev-input}}
   </div>

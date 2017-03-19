@@ -9,11 +9,12 @@ export default Route.extend({
     let uid = this.get('session').currentUser.id;
     return RSVP.hash({
       // Note that this way of getting stickers does not allow
-      // sideloading. A better option migth be store.findAll()
+      // sideloading. A better option might be store.findAll()
       // with {include: 'sender'}
       // TODO: Also consider reload: true or background reload
       // eslint-disable-next-line camelcase
-      stickers: this.store.query('sticker', {user_id: uid, include: 'sender'})
+      stickers: this.store.query('sticker', {user_id: uid, include: 'sender'}),
+      categories: this.store.findAll('category')
     });
   }
 });
