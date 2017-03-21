@@ -1,6 +1,9 @@
 # Next Feature:
 - Better stickers (with API changes)
-  - Sticker single view
+  - Sticker "next/back", exploration
+  - Sticker "received on"
+  - Loading spinner for stickers
+  - Error view/state for sticker?
 
 - Fix measure regression (login etc.)
 
@@ -22,6 +25,7 @@
   - Log-in, log-out spot on menu
     - log-in task failure message
   - Sticker send-received
+  - "mandatory=..." option for rev-input to add * to label
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
@@ -37,6 +41,7 @@
 
 # Later:
 - Loading categories in sticker index hook. Should we do that?
+- Show username for stickers when added to API
 
 - Handle offline case for stickers? (Do we need to change anything?)
 - Sticker deletion
@@ -44,7 +49,7 @@
 
 - Stickers: Remove RSVP.hash and pass naked model?
   - Consider sequencing of category > sticker loading for received stickers
-- Sticker send validation second pass, e.g. "non empty string"
+- Sticker send validation second pass, e.g. "non empty string", "required"
 
 - Note Card component
   - Note single view
