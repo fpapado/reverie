@@ -21,6 +21,7 @@
       </label>
     </div>
     {{#power-select
+      searchEnabled=false
       options=model.categories
       selected=model.newSticker.category
       onchange=(action (mut model.newSticker.category))
