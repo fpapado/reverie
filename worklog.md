@@ -22,6 +22,8 @@
 
 # Visual / UX:
 - Menus
+  - Flexbox
+  - Color-code logged-in/out items
   - Log-in, log-out spot on menu
     - log-in task failure message
   - Sticker send-received
@@ -29,7 +31,7 @@
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
-- Add link-bg-animate class to all relevant places
+- Replace ad-hoc links with action/task/rev buttons
 
 - Rev-input spice
   - Placeholder for rev-input
