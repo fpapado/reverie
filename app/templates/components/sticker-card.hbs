@@ -30,8 +30,9 @@
     {{/power-select}}
   </div>
 
-  <div class="mb3">
-    {{#rev-input
+  <div class="mb4">
+    {{#rev-textarea
+      rows=4
       value=model.newSticker.title
       errors=(v-get this 'model.newSticker.title' 'messages')
       classNames=''
@@ -40,7 +41,10 @@
       <span class="fw5">
         (Optional; 150 characters max)
       </span>
-    {{/rev-input}}
+    {{/rev-textarea}}
+    <div class="db tr">
+      <span class="f6">{{model.newSticker.title.length}}/150 Chars</span>
+    </div>
   </div>
 
   {{#if model.newSticker.errors}}

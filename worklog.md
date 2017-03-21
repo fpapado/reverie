@@ -1,9 +1,8 @@
 # Next Feature:
 - Better stickers (with API changes)
-  - Add measure functionality back in
-  - Sending
-    - Make sticker message a text field
-    - Style sticker category field
+  - Sticker single view
+
+- Fix measure regression (login etc.)
 
 # Priority
 - Sticker features
@@ -16,7 +15,6 @@
 
 - General UI / JG
 - Note single view
-- Sticker single view
 - "Timeline view"
 
 # Visual / UX:
@@ -64,6 +62,8 @@
 - Revamp about page
 
 # Even Later:
+- Power-select search off?
+  - Power-select border style
 - PouchDB logging off
 - Some kind of notification system?
 - PouchDB Import/Export
