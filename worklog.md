@@ -29,6 +29,7 @@
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
+- Add link-bg-animate class to all relevant places
 
 - Rev-input spice
   - Placeholder for rev-input
