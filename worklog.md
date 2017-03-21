@@ -1,17 +1,29 @@
 # Next Feature:
 - Better stickers (with API changes)
-  - Sticker component
-    - Add functionality / images
-    - Style stickers
-  - Remove RSVP.hash and pass naked model?
-    - Consider sequencing of category > sticker loading for received stickers
-  - Addition
+  - Add measure functionality back in
+  - Sending
     - Make sticker message a text field
     - Style sticker category field
-    - Sticker send validation second pass, e.g. "non empty string"
+
+# Priority
+- Sticker features
+- Import/Export notes
+- Sticker export
+- Note card interface overhaul
+- Sticker presentation page
+- "Message of the day"
+- Reflection end-of-day functionality
+
+- General UI / JG
+- Note single view
+- Sticker single view
+- "Timeline view"
 
 # Visual / UX:
-- Log-in, log-out spot on menu
+- Menus
+  - Log-in, log-out spot on menu
+    - log-in task failure message
+  - Sticker send-received
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
@@ -26,7 +38,15 @@
   - Ditto for all routes, actually
 
 # Later:
+- Loading categories in sticker index hook. Should we do that?
+
 - Handle offline case for stickers? (Do we need to change anything?)
+- Sticker deletion
+- "Sent stickers"
+
+- Stickers: Remove RSVP.hash and pass naked model?
+  - Consider sequencing of category > sticker loading for received stickers
+- Sticker send validation second pass, e.g. "non empty string"
 
 - Note Card component
   - Note single view
@@ -61,3 +81,4 @@
 - Markdown parsing
 - Adding images to notes
 - (Not necessary) Smoke-and-mirrors list rendering
+

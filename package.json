@@ -63,6 +63,7 @@
   "private": true,
   "dependencies": {
     "broccoli-merge-trees": "^1.2.1",
-    "broccoli-serviceworker": "0.1.4"
+    "broccoli-serviceworker": "0.1.4",
+    "flexboxgrid": "^6.3.1"
   }
 }
