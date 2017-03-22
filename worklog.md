@@ -2,22 +2,19 @@
 - Better stickers (with API changes)
   - Sticker "next/back", exploration
   - Sticker "received on"
-  - Loading spinner for stickers
-  - Error view/state for sticker?
 
 - Fix measure regression (login etc.)
 
 # Priority
 - Sticker features
-- Import/Export notes
 - Sticker export
-- Note card interface overhaul
-- Sticker presentation page
+- Note overhaul fields,
+  - Note card interface overhaul
+  - Import/Export notes
 - "Message of the day"
 - Reflection end-of-day functionality
 
-- General UI / JG
-- Note single view
+- General UI/UX, JG
 - "Timeline view"
 
 # Visual / UX:
@@ -32,6 +29,10 @@
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
 - Replace ad-hoc links with action/task/rev buttons
+
+- Sticker UX
+  - Loading spinner for stickers
+  - Error view/state for sticker?
 
 - Rev-input spice
   - Placeholder for rev-input

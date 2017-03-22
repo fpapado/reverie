@@ -1,17 +1,3 @@
 <div class="mb4">
-  {{#rev-card}}
-    <div class="row around-xs middle-xs">
-      <div class="col-xs-8 col-sm-4 mb3">
-        <img class="db w-100" src="{{model.category.imgurl}}" />
-      </div>
-      <div class="col-xs-12 col-sm-7 col-sm-offset-1 mb3 ">
-        <blockquote class="athelas ml0 mt0 pl4 black-90 bl bw1 b--light-blue">
-          <p class="f5 f4-ns lh-copy measure mt0">
-            {{model.title}}
-          </p>
-          <cite class="f6 ttu tracked fs-normal">―{{model.sender.email}}</cite>
-        </blockquote>
-      </div>
-    </div>
-  {{/rev-card}}
+  {{rev-sticker-show-card sticker=model}}
 </div>
