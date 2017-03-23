@@ -1,6 +1,6 @@
 <button disabled={{isDisabled}} class="input-reset dib mr3 f5 pa3 link-bg-animate bw1 ba b--light-blue bg-white black-80
 {{if isDisabled "o-50 disabled" "pointer hover-white hover-bg-light-blue"}}"
-  onclick={{perform attrs.task}}>
+  onclick={{perform attrs.task attrs.arg}}>
   {{#if attrs.task.isIdle}}
     {{text}}
   {{else}}

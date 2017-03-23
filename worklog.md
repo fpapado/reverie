@@ -1,6 +1,5 @@
 # Next Feature:
 - Better stickers (with API changes)
-  - Sticker "next/back", exploration
   - Sticker "received on"
 
 - Fix measure regression (login etc.)
@@ -14,6 +13,8 @@
 - "Message of the day"
 - Reflection end-of-day functionality
 
+- Offline stickers
+- Admin sticker permissions
 - General UI/UX, JG
 - "Timeline view"
 
