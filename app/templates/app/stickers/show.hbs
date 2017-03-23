@@ -1,0 +1,21 @@
+<div class="mb4">
+  {{rev-sticker-show-card
+    sticker=model
+  }}
+
+  <div class="row center-xs middle-xs">
+    {{#rev-task-button
+      isDisabled=false
+      task=nextSticker
+      arg=-1
+      text="Prev"}}
+    {{/rev-task-button}}
+
+    {{#rev-task-button
+      isDisabled=false
+      task=nextSticker
+      arg=1
+      text="Next"}}
+    {{/rev-task-button}}
+  </div>
+</div>

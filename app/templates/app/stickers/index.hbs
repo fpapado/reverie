@@ -2,28 +2,33 @@
   {{#rev-card
     title='Your Stickers'}}
 
-    <div class="mb3 pa3 bg-light-blue white">
-    <p>
-      Stickers are short messages that you can give to people at the session!
-      These are the ones that were sent to you. Perhaps you want to
-      {{#link-to 'app.stickers.send'
-        class="link bb bw1 white hover-mid-gray"
-      }}
-          send one?
-      {{/link-to}}
-    </p>
+    <div class="row mb3 ph3">
+      <div class="ph3 col-xs-12 col-sm-6 col-sm-offset-3 bg-light-blue white">
+        <p class="center measure f6">
+          Stickers are short messages that you can give to people at the session!
+          These are the ones that were sent to you. Perhaps you want to
+          {{#link-to 'app.stickers.send'
+            class="link bb bw1 white hover-mid-gray"
+          }}
+              send one?
+          {{/link-to}}
+        </p>
+      </div>
     </div>
 
-    {{#each model.stickers as |sticker|}}
-      <div class="mb3 pa3 bg-light-gray black-80">
-        <span class="db">{{sticker.title}}</span>
-        <span class="db">by {{sticker.sender.email}}</span>
-      </div>
-    {{else}}
-    <span class="db tc">
-      No stickers yet ☹️
-    </span>
-    {{/each}}
+    <div class="row around-xs">
+      {{#each model.stickers as |sticker|}}
+        <div class="col-xs-6 col-sm-4 col-md-3 mb3">
+        {{#rev-sticker
+          sticker=sticker}}
+        {{/rev-sticker}}
+        </div>
+      {{else}}
+      <span class="db tc">
+        No stickers yet ☹️
+      </span>
+      {{/each}}
+    </div>
 
   {{/rev-card}}
 </div>

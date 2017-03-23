@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('sticker', 'Unit | Model | sticker', {
+moduleForModel('category', 'Unit | Model | category', {
   // Specify the other units that are required for this test.
-  needs: ['model:user', 'model:category']
+  needs: ['model:sticker']
 });
 
 test('it exists', function(assert) {

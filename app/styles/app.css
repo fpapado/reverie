@@ -24,3 +24,26 @@
 .hover-b--light-blue:focus {
   border-color: #96ccff;
 }
+
+.link-bg-animate {
+  text-decoration: none;
+  -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
+  transition: color .15s ease-in, background-color .15s ease-in-out;
+}
+.link-bg-animate:link, .link-bg-animate:visited {
+  -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
+  transition: color .15s ease-in, background-color .15s ease-in-out;
+}
+.link-bg-animate:hover {
+  -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
+  transition: color .15s ease-in, background-color .15s ease-in-out;
+}
+.link-bg-animate:active {
+  -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
+  transition: color .15s ease-in, background-color .15s ease-in-out;
+}
+.link-bg-animate:focus {
+  -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
+  transition: color .15s ease-in, background-color .15s ease-in-out;
+  outline: 1px dotted currentColor;
+}

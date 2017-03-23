@@ -21,6 +21,7 @@ AppRouter.map(function() {
   this.route('app', function() {
     this.route('stickers', function() {
       this.route('send');
+      this.route('show', { path: '/:sticker_id' });
     });
   });
 });
