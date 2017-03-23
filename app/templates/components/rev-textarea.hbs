@@ -1,0 +1,28 @@
+<div class="mb2">
+  <label class="db mb1 f6 b"
+    data-error={{_errorMessages}}>
+    {{label}}{{yield}}
+  </label>
+  <span class="db mb2 f6 mid-gray">
+  {{subLabel}}
+  </span>
+</div>
+
+<textarea
+  rows="{{rows}}"
+  class="input-reset db mb2 pa2 w-100 ba bw1 b--black-20
+  {{if value
+    (concat
+      "validate "
+      (if errors.length "invalid b--red bw1" "valid hover-b--light-blue")
+      )
+    "hover-b--light-blue"
+  }}"
+  onkeyup={{action (mut value) value='target.value'}}
+  onchange={{action (mut value) value='target.value'}}>{{value}}</textarea>
+
+{{#if value}}
+  <span class="db f6 red">
+    {{_errorMessages}}
+  </span>
+{{/if}}

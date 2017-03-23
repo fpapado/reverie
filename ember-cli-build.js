@@ -5,7 +5,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     fingerprint: {
-      exclude: ["assets/icons/"]
+      exclude: ['assets/icons/']
     }
   });
 
@@ -13,6 +13,12 @@ module.exports = function(defaults) {
     development: 'vendor/tachyons.css',
     production: 'vendor/tachyons.min.css',
     test: 'vendor/tachyons.css'
+  });
+
+  app.import({
+    development: 'vendor/flexboxgrid.css',
+    production: 'vendor/flexboxgrid.min.css',
+    test: 'vendor/flexboxgrid.css',
   });
 
   // Use `app.import` to add additional libraries to the generated

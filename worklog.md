@@ -1,17 +1,35 @@
 # Next Feature:
-- New sticker model
-- Better stickers (with API changes)
-  - Sticker component
-    - Add functionality / images
-    - Style stickers
-  - Make sticker message a text field
-  - Add sticker category power-select
-  - Remove RSVP.hash and pass naked model?
-  - Make message = title, text field
+- Sticker export
+
+# Priority
+- Note overhaul fields,
+  - Note card interface overhaul
+  - Import/Export notes
+- "Message of the day"
+- Reflection end-of-day functionality
+
+- Offline stickers
+- Admin sticker permissions
+- General UI/UX, JG
+- "Timeline view"
 
 # Visual / UX:
+- Menus
+  - Flexbox
+  - Color-code logged-in/out items
+  - Log-in, log-out spot on menu
+    - log-in task failure message
+  - Sticker send-received
+  - "mandatory=..." option for rev-input to add * to label
+- Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
+- Replace ad-hoc links with action/task/rev buttons
+
+- Sticker UX
+  - Sticker "received on", perhaps sort functionality?
+  - Loading spinner for stickers
+  - Error view/state for sticker?
 
 - Rev-input spice
   - Placeholder for rev-input
@@ -19,17 +37,29 @@
   - star for required
   - optional (header|subtitle?)
 
-- Log-in, log-out spot on menu
 - Signup/in ember-concurrency tasks
+  - Ditto for all routes, actually
 
 # Later:
+- Loading categories in sticker index hook. Should we do that?
+- Show username for stickers when added to API
+
 - Handle offline case for stickers? (Do we need to change anything?)
+- Sticker deletion
+- "Sent stickers"?
+
+- Stickers: Remove RSVP.hash and pass naked model?
+  - Consider sequencing of category > sticker loading for received stickers
+- Sticker send validation second pass, e.g. "non empty string", "required"
+
+- Pagination? (Requires scrivener)
 
 - Note Card component
   - Note single view
   - Note edit view
 - Add "info" to routes, menu button
 - "Guest" author for notes
+- Rename 'user-validations' to 'validations' if need be
 
 # Style pass:
 - Design stickers
@@ -40,6 +70,8 @@
 - Revamp about page
 
 # Even Later:
+- Power-select border style
+- PouchDB logging off
 - Some kind of notification system?
 - PouchDB Import/Export
     (https://github.com/nolanlawson/pouchdb-replication-stream)
