@@ -1,12 +1,7 @@
 # Next Feature:
-- Better stickers (with API changes)
-  - Sticker "received on"
-
-- Fix measure regression (login etc.)
+- Sticker export
 
 # Priority
-- Sticker features
-- Sticker export
 - Note overhaul fields,
   - Note card interface overhaul
   - Import/Export notes
@@ -32,6 +27,7 @@
 - Replace ad-hoc links with action/task/rev buttons
 
 - Sticker UX
+  - Sticker "received on", perhaps sort functionality?
   - Loading spinner for stickers
   - Error view/state for sticker?
 
@@ -50,11 +46,13 @@
 
 - Handle offline case for stickers? (Do we need to change anything?)
 - Sticker deletion
-- "Sent stickers"
+- "Sent stickers"?
 
 - Stickers: Remove RSVP.hash and pass naked model?
   - Consider sequencing of category > sticker loading for received stickers
 - Sticker send validation second pass, e.g. "non empty string", "required"
+
+- Pagination? (Requires scrivener)
 
 - Note Card component
   - Note single view
@@ -72,8 +70,7 @@
 - Revamp about page
 
 # Even Later:
-- Power-select search off?
-  - Power-select border style
+- Power-select border style
 - PouchDB logging off
 - Some kind of notification system?
 - PouchDB Import/Export
@@ -91,4 +88,3 @@
 - Markdown parsing
 - Adding images to notes
 - (Not necessary) Smoke-and-mirrors list rendering
-
