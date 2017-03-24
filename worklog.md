@@ -2,13 +2,13 @@
 - Sticker export
 
 # Priority
+- User stickers CORS/OPTIONS redirect bug
+  - Happens when using Ember data .get('stickers'), but not .query(...)
 - Note overhaul fields,
   - Note card interface overhaul
   - Import/Export notes
 - "Message of the day"
 - Reflection end-of-day functionality
-
-- Offline stickers
 - Admin sticker permissions
 - General UI/UX, JG
 - "Timeline view"
@@ -19,8 +19,9 @@
   - Color-code logged-in/out items
   - Log-in, log-out spot on menu
     - log-in task failure message
-  - Sticker send-received
-  - "mandatory=..." option for rev-input to add * to label
+  - Sticker send-received submenu
+
+- "mandatory=..." option for rev-input to add * to label
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
 - Model hook loading spinner
