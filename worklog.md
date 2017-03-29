@@ -1,10 +1,38 @@
 # Next Feature:
 - UX / Visual
 
+# Visual / UX:
+- Loading hook only after certain ms
+
+- Menus
+  - Menu component
+  - Flexbox
+  - Color-code logged-in/out items
+  - Log-in, log-out spot on menu
+    - log-in task failure message
+  - Sticker send-received submenu
+- Offline indicator
+
+- Color unification
+
+- Replace ad-hoc links with action/task/rev buttons
+
+- Task-button spinner, blue bg, disable while processing
+- Ember-concurrency loading state after few ms
+- Signup/in ember-concurrency tasks
+  - Ditto for all routes, actually
+
+- Slower input debounce, add it throughout
+
+- Animations for routes, stickers
+
+
 # Priority
 - General UI/UX, JG
 - Note overhaul fields,
   - Note card interface overhaul
+  - -category etc.
+  - Note card component
   - Import/Export notes
 - Sticker export
 - "Message of the day"
@@ -12,25 +40,7 @@
 - Admin sticker permissions
 - "Timeline view"
 
-# Visual / UX:
-- Animations for routes, stickers
-- Model hook loading spinner
-- Ember-concurrency loading state after few ms
-- Menus
-  - Menu component
-  - Offline indicator
-  - Flexbox
-  - Color-code logged-in/out items
-  - Log-in, log-out spot on menu
-    - log-in task failure message
-  - Sticker send-received submenu
-- Color unification
-
-- "mandatory=..." option for rev-input to add * to label
-- Slower debounce, add it throughout
-- Task-button spinner, blue bg, disable while processing
-- Replace ad-hoc links with action/task/rev buttons
-
+# Other visual / UX
 - Sticker UX
   - Sticker "received on", perhaps sort functionality?
   - Loading spinner for stickers
@@ -41,9 +51,8 @@
   - Fancy check marks etc.
   - star for required
   - optional (header|subtitle?)
+  - "mandatory=..." option for rev-input to add * to label
 
-- Signup/in ember-concurrency tasks
-  - Ditto for all routes, actually
 
 # Later:
 - Include "receiver" in sideloading of stickers index?
