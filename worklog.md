@@ -1,15 +1,15 @@
 # Next Feature:
-- Test offline status change detection
+- UX / Visual
 
 # Priority
-- Sticker export
+- General UI/UX, JG
 - Note overhaul fields,
   - Note card interface overhaul
   - Import/Export notes
+- Sticker export
 - "Message of the day"
 - Reflection end-of-day functionality
 - Admin sticker permissions
-- General UI/UX, JG
 - "Timeline view"
 
 # Visual / UX:

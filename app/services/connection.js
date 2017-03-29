@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const {
   computed: { equal },
-  Logger: { debug },
+  // Logger: { debug },
   set,
   Service
 } = Ember;
@@ -16,11 +16,11 @@ export default Service.extend({
     this._super(...arguments);
     set(this, 'state', window.navigator.onLine ? 'online' : 'offline');
     this._onOfflineHandler = () => {
-      debug('Connection State: offline');
+      // debug('Connection State: offline');
       set(this, 'state', 'offline');
     };
     this._onOnlineHandler = () => {
-      debug('Connection State: online');
+      // debug('Connection State: online');
       set(this, 'state', 'online');
     };
 
