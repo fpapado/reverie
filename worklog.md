@@ -2,8 +2,6 @@
 - UX / Visual
 
 # Visual / UX:
-- Loading hook only after certain ms
-
 - Menus
   - Menu component
   - Flexbox
@@ -23,6 +21,9 @@
   - Ditto for all routes, actually
 
 - Slower input debounce, add it throughout
+
+- Loading hook only after certain ms
+  - Or disable it for states that use the deferred pattern?
 
 - Animations for routes, stickers
 
@@ -55,6 +56,10 @@
 
 
 # Later:
+- Pagination? (Requires scrivener)
+  - At least for the display?
+  - Use that pagination in the sticker exploration
+
 - Include "receiver" in sideloading of stickers index?
 - Loading categories in sticker index hook. Should we do that?
 - Show username for stickers when added to API
@@ -69,9 +74,6 @@
 - Stickers: Remove RSVP.hash and pass naked model?
   - Consider sequencing of category > sticker loading for received stickers
 - Sticker send validation second pass, e.g. "non empty string", "required"
-
-- Pagination? (Requires scrivener)
-  - Use that pagination in the sticker exploration
 
 - Note Card component
   - Note single view

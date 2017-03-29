@@ -17,18 +17,19 @@
     </div>
 
     <div class="row around-xs">
-      {{#each model.stickers as |sticker|}}
+      {{#each stickers as |sticker|}}
         <div class="col-xs-6 col-sm-4 col-md-3 mb3">
         {{#rev-sticker
           sticker=sticker}}
         {{/rev-sticker}}
         </div>
-      {{else}}
-      <span class="db tc">
-        No stickers yet ☹️
-      </span>
       {{/each}}
     </div>
+    {{#if isLoadingStickers}}
+    <div class="row center-xs">
+      {{rev-loading}}
+    </div>
+    {{/if}}
 
   {{/rev-card}}
 </div>
