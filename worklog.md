@@ -1,7 +1,5 @@
 # Next Feature:
-- Prefetch strategy for relevant sticker requests?
-- "Offline" service https://tsubik.com/blog/make-your-emberjs-web-app-more-progressive-part-3-offline-data/
-  - Use offline service to prevent sticker sending
+- Test offline status change detection
 
 # Priority
 - Sticker export
@@ -17,7 +15,10 @@
 # Visual / UX:
 - Animations for routes, stickers
 - Model hook loading spinner
+- Ember-concurrency loading state after few ms
 - Menus
+  - Menu component
+  - Offline indicator
   - Flexbox
   - Color-code logged-in/out items
   - Log-in, log-out spot on menu
@@ -50,6 +51,7 @@
 - Show username for stickers when added to API
 - User stickers CORS/OPTIONS redirect bug
   - Happens when using Ember data .get('stickers'), but not .query(...)
+- Prefetch strategy for relevant sticker requests?
 
 
 - Sticker deletion
@@ -60,6 +62,7 @@
 - Sticker send validation second pass, e.g. "non empty string", "required"
 
 - Pagination? (Requires scrivener)
+  - Use that pagination in the sticker exploration
 
 - Note Card component
   - Note single view
