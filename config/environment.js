@@ -42,7 +42,31 @@ module.exports = function(environment) {
   };
 
   ENV.serviceWorker = {
-    excludePaths: ['index.html', 'manifest.appcache']
+    enabled: true,
+    excludePaths: ['index.html', 'manifest.appcache'],
+    networkFirstURLs: [
+      {
+        route: '/api/stickers',
+        method: 'any',
+        options: {
+          origin: 'https://safe-brushlands-58823.herokuapp.com'
+        }
+      },
+      {
+        route: '/api/users/current',
+        method: 'any',
+        options: {
+          origin: 'https://safe-brushlands-58823.herokuapp.com'
+        }
+      },
+      {
+        route: '/api/categories/',
+        method: 'any',
+        options: {
+          origin: 'https://safe-brushlands-58823.herokuapp.com'
+        }
+      }
+    ]
     // swIncludeFiles: [
     //   'node_modules/pouchdb/dist/pouchdb.js'
     // ]
@@ -54,7 +78,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.serviceWorker.enabled = false;
+    // ENV.serviceWorker.enabled = false;
     ENV.serviceWorker.debug = true;
   }
 

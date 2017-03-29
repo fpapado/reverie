@@ -15,6 +15,7 @@ export default Component.extend(Validations, {
   notify: inject.service(),
   session: inject.service(),
   store: inject.service(),
+  connection: inject.service(),
 
   sendSticker: task(function* () {
     // Get the "new sticker" model

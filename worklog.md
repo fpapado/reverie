@@ -1,29 +1,34 @@
 # Next Feature:
-- Sticker export
+- UX / Visual
 
 # Priority
+- General UI/UX, JG
 - Note overhaul fields,
   - Note card interface overhaul
   - Import/Export notes
+- Sticker export
 - "Message of the day"
 - Reflection end-of-day functionality
-
-- Offline stickers
 - Admin sticker permissions
-- General UI/UX, JG
 - "Timeline view"
 
 # Visual / UX:
+- Animations for routes, stickers
+- Model hook loading spinner
+- Ember-concurrency loading state after few ms
 - Menus
+  - Menu component
+  - Offline indicator
   - Flexbox
   - Color-code logged-in/out items
   - Log-in, log-out spot on menu
     - log-in task failure message
-  - Sticker send-received
-  - "mandatory=..." option for rev-input to add * to label
+  - Sticker send-received submenu
+- Color unification
+
+- "mandatory=..." option for rev-input to add * to label
 - Slower debounce, add it throughout
 - Task-button spinner, blue bg, disable while processing
-- Model hook loading spinner
 - Replace ad-hoc links with action/task/rev buttons
 
 - Sticker UX
@@ -41,10 +46,14 @@
   - Ditto for all routes, actually
 
 # Later:
+- Include "receiver" in sideloading of stickers index?
 - Loading categories in sticker index hook. Should we do that?
 - Show username for stickers when added to API
+- User stickers CORS/OPTIONS redirect bug
+  - Happens when using Ember data .get('stickers'), but not .query(...)
+- Prefetch strategy for relevant sticker requests?
 
-- Handle offline case for stickers? (Do we need to change anything?)
+
 - Sticker deletion
 - "Sent stickers"?
 
@@ -53,6 +62,7 @@
 - Sticker send validation second pass, e.g. "non empty string", "required"
 
 - Pagination? (Requires scrivener)
+  - Use that pagination in the sticker exploration
 
 - Note Card component
   - Note single view
@@ -60,6 +70,7 @@
 - Add "info" to routes, menu button
 - "Guest" author for notes
 - Rename 'user-validations' to 'validations' if need be
+
 
 # Style pass:
 - Design stickers

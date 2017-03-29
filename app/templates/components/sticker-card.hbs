@@ -4,55 +4,70 @@
   buttonText='Send Sticker'
   buttonDisabled=validations.messages.length
 }}
-  <div class="mb3">
-    {{rev-input
-      value=model.newSticker.receiver
-      errors=(v-get this 'model.newSticker.receiver' 'messages')
-      classNames=''
-      type='email'
-      label='Receiver email*'}}
-  </div>
-
-  <div class="mb4">
-    <div class="mb2">
-      <label class="db mb1 f6 b"
-        data-error={{_errorMessages}}>
-        Sticker type*
-      </label>
-    </div>
-    {{#power-select
-      searchEnabled=false
-      options=model.categories
-      selected=model.newSticker.category
-      onchange=(action (mut model.newSticker.category))
-      as |category|
-    }}
-    <img src="{{category.imgurl}}" class="dib h1 w1"> <strong>{{category.title}}</strong>
-    {{/power-select}}
-  </div>
-
-  <div class="mb4">
-    {{#rev-textarea
-      rows=4
-      value=model.newSticker.title
-      errors=(v-get this 'model.newSticker.title' 'messages')
-      classNames=''
-      searchEnabled=false
-      label='Message'}}
-      <span class="fw5">
-        (Optional; 150 characters max)
-      </span>
-    {{/rev-textarea}}
-    <div class="db tr">
-      <span class="f6">{{model.newSticker.title.length}}/150 Chars</span>
-    </div>
-  </div>
-
-  {{#if model.newSticker.errors}}
-    <div class="mb3">
-      {{#each model.newSticker.errors as |error|}}
-        <span class="db red mb2">{{error}}</span>
-      {{/each}}
+  {{#if connection.isOffline}}
+    <div class="row mb3 ph3">
+      <div class="w-100 pa3 tc bg-light-red white">
+        <p class="center f6">
+          You are currently offline, so you cannot send stickers :(
+        </p>
+      </div>
     </div>
   {{/if}}
+
+  <div class="{{if connection.isOffline "o-50"}}">
+    <div class="mb3">
+      {{rev-input
+        value=model.newSticker.receiver
+        errors=(v-get this 'model.newSticker.receiver' 'messages')
+        classNames=''
+        type='email'
+        label='Receiver email*'
+        disabled=connection.isOffline}}
+    </div>
+
+    <div class="mb4">
+      <div class="mb2">
+        <label class="db mb1 f6 b"
+          data-error={{_errorMessages}}>
+          Sticker type*
+        </label>
+      </div>
+      {{#power-select
+        searchEnabled=false
+        disabled=connection.isOffline
+        options=model.categories
+        selected=model.newSticker.category
+        onchange=(action (mut model.newSticker.category))
+        as |category|
+      }}
+      <img src="{{category.imgurl}}" class="dib h1 w1"> <strong>{{category.title}}</strong>
+      {{/power-select}}
+    </div>
+
+    <div class="mb4">
+      {{#rev-textarea
+        rows=4
+        value=model.newSticker.title
+        errors=(v-get this 'model.newSticker.title' 'messages')
+        classNames=''
+        searchEnabled=false
+        disabled=connection.isOffline
+        label='Message'}}
+        <span class="fw5">
+          (Optional; 150 characters max)
+        </span>
+      {{/rev-textarea}}
+      <div class="db tr">
+        <span class="f6">{{model.newSticker.title.length}}/150 Chars</span>
+      </div>
+    </div>
+
+    {{#if model.newSticker.errors}}
+      <div class="mb3">
+        {{#each model.newSticker.errors as |error|}}
+          <span class="db red mb2">{{error}}</span>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
 {{/rev-card}}
