@@ -69,6 +69,10 @@
   border-color: #96ccff;
 }
 
+.active{
+  color:#96ccff;
+}
+
 .link-bg-animate {
   text-decoration: none;
   -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;
