@@ -22,12 +22,15 @@
         </svg>
       {{/link-to}}
 
-      {{#link-to "about" class="f6 f5-l link-bg-animate black-80 hover-light-blue col-xs-2 ph4-l"}}
+      {{#link-to "app.stickers.send" class="f6 f5-l link-bg-animate black-80 hover-light-blue col-xs-2 ph4-l"}}
         <svg class="h1 w1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
           <use xlink:href="#geolocation"></use>
         </svg>
       {{/link-to}}
   </div>
   </nav>
+  {{!--  <div class="f6 pa2 bg-light-red w-100 tc near-white">  --}}
+    {{!--  You are offline, so you cannot send stickers :(  --}}
+  {{!--  </div>  --}}
   {{yield}}
 </header>

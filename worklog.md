@@ -6,16 +6,26 @@
   - Menu component
   - Flexbox
   - Color-code logged-in/out items
+  - Rev-card for notes, about
+  - "Active" highlight for route
+  - Add user/settings side-bar/drop-down with log in/out options?
   - Log-in, log-out spot on menu
     - log-in task failure message
   - Sticker send-received submenu
+  - Toggle sticker view
+  - "info" button per screen
 - Offline indicator
+  - Ember-flash? Could use for motd too...
+- Splash screen with the logo, about page
+
+- Filter stickers returned from .peek
+
+- Task-button spinner, blue bg, disable while processing
 
 - Color unification
 
 - Replace ad-hoc links with action/task/rev buttons
 
-- Task-button spinner, blue bg, disable while processing
 - Ember-concurrency loading state after few ms
 - Signup/in ember-concurrency tasks
   - Ditto for all routes, actually
@@ -27,8 +37,8 @@
 
 - Animations for routes, stickers
 
-
 # Priority
+- Manifest AppCache fix
 - General UI/UX, JG
 - Note overhaul fields,
   - Note card interface overhaul
