@@ -2,7 +2,7 @@
 - UX / Visual
 
 # Visual / UX:
-- Footer, "about"
+- Footer, "about" page, both from index an logged in
 - Rev-card for notes, about
 
 - Offline indicator
@@ -31,6 +31,8 @@
   - Color-code logged-in/out items
 
 - Animations for routes, stickers
+- Onboarding
+- Add Google Fonts to service worker
 
 # Priority
 - Manifest AppCache fix
