@@ -5,15 +5,6 @@
 - Splash screen with the logo, about page
 - Rev-card for notes, about
 
-- Main Menu
-  - (Later) Alignment of items
-  - "Active" highlight for route (fix nested)
-
-- Add user/settings side-bar/drop-down with log in/out options?
-- Log-in, log-out spot on menu
-  - log-in task failure message
-  - Color-code logged-in/out items
-
 - Offline indicator
   - Ember-flash? Could use for motd too...
 
@@ -33,6 +24,11 @@
 
 - Loading hook only after certain ms
   - Or disable it for states that use the deferred pattern?
+
+- Add user/settings side-bar/drop-down with log in/out options?
+- Log-in, log-out spot on menu
+  - log-in task failure message
+  - Color-code logged-in/out items
 
 - Animations for routes, stickers
 
