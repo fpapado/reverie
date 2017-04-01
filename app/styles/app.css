@@ -1,3 +1,37 @@
+/* Fonts */
+.jos {
+  font-family: 'Josefin Slab', serif;
+}
+.cabin {
+  font-family: 'Cabin Sketch', cursive;
+}
+
+/* Colors */
+.hover-b--light-blue:hover {
+  border-color: #96ccff;
+}
+.hover-b--light-blue:focus {
+  border-color: #96ccff;
+}
+.custom-blue {
+  color: #6386a8;
+}
+.custom-gray {
+  color: #adb3b9;
+}
+.bg-custom-blue {
+  background-color: #6386a8;
+}
+.bg-custom-gray {
+  background-color: #adb3b9;
+}
+
+.active{
+  color:#96ccff;
+}
+
+
+/* Loading Screen */
 .hourglass{
     display:block;
     background:#fff;
@@ -45,6 +79,7 @@
     }
 }
 
+/* Ember-Notify */
 .ember-notify {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -62,17 +97,7 @@
   background-color: #B05746;
 }
 
-.hover-b--light-blue:hover {
-  border-color: #96ccff;
-}
-.hover-b--light-blue:focus {
-  border-color: #96ccff;
-}
-
-.active{
-  color:#96ccff;
-}
-
+/* Transitions*/
 .link-bg-animate {
   text-decoration: none;
   -webkit-transition: color .15s ease-in, background-color .15s ease-in-out;

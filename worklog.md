@@ -2,7 +2,7 @@
 - UX / Visual
 
 # Visual / UX:
-- Splash screen with the logo, about page
+- Footer, "about"
 - Rev-card for notes, about
 
 - Offline indicator
@@ -62,6 +62,7 @@
 
 
 # Later:
+- SVG def loading proper
 - Pagination? (Requires scrivener)
   - At least for the display?
   - Use that pagination in the sticker exploration

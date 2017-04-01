@@ -3,12 +3,20 @@
   <span class='message-from-block white'>{{message.text}}</span>
 {{/ember-notify}}
 
-<body class="pt5 pt0-l">
-  {{rev-navbar}}
-
-  <div class="mw7-ns pa3 lh-copy black-80 center avenir">
+{{#if isCurrentRouteIndex}}
+<body class="">
+  <div class="avenir">
     {{outlet}}
   </div>
 </body>
+{{else}}
+<body class="pt5 pt0-l">
+    {{rev-navbar}}
 
-{{rev-svgs}}
+  <div class="avenir">
+    {{outlet}}
+  </div>
+
+  {{rev-svgs}}
+</body>
+{{/if}}
