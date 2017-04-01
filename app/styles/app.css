@@ -19,6 +19,9 @@
 .custom-gray {
   color: #adb3b9;
 }
+.blue-white {
+  color: #f0f7ff;
+}
 .bg-custom-blue {
   background-color: #6386a8;
 }
@@ -27,7 +30,8 @@
 }
 
 .active{
-  color:#96ccff;
+  opacity: 1;
+  color: #fff;
 }
 
 
