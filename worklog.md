@@ -2,21 +2,20 @@
 - UX / Visual
 
 # Visual / UX:
-- Menus
-  - Menu component
-  - Flexbox
+- Splash screen with the logo, about page
+- Rev-card for notes, about
+
+- Main Menu
+  - (Later) Alignment of items
+  - "Active" highlight for route (fix nested)
+
+- Add user/settings side-bar/drop-down with log in/out options?
+- Log-in, log-out spot on menu
+  - log-in task failure message
   - Color-code logged-in/out items
-  - Rev-card for notes, about
-  - "Active" highlight for route
-  - Add user/settings side-bar/drop-down with log in/out options?
-  - Log-in, log-out spot on menu
-    - log-in task failure message
-  - Sticker send-received submenu
-  - Toggle sticker view
-  - "info" button per screen
+
 - Offline indicator
   - Ember-flash? Could use for motd too...
-- Splash screen with the logo, about page
 
 - Filter stickers returned from .peek
 
@@ -52,6 +51,7 @@
 - "Timeline view"
 
 # Other visual / UX
+- "info" button per screen
 - Sticker UX
   - Sticker "received on", perhaps sort functionality?
   - Loading spinner for stickers
