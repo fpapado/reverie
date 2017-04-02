@@ -22,11 +22,15 @@
 .blue-white {
   color: #f0f7ff;
 }
+
 .bg-custom-blue {
   background-color: #6386a8;
 }
 .bg-custom-gray {
   background-color: #adb3b9;
+}
+.bg-blue-white {
+  background-color: #f0f7ff;
 }
 
 .active{
@@ -34,6 +38,10 @@
   color: #fff;
 }
 
+/* Util */
+.vh-90 {
+  height: 90vh
+}
 
 /* Loading Screen */
 .hourglass{

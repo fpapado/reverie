@@ -2,8 +2,7 @@
 - UX / Visual
 
 # Visual / UX:
-- Footer, "about" page, both from index an logged in
-- Rev-card for notes, about
+- Rev-card for notes
 
 - Offline indicator
   - Ember-flash? Could use for motd too...
