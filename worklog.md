@@ -2,6 +2,10 @@
 - UX / Visual
 
 # Visual / UX:
+- "You must be logged in to see this page"
+  - Unified signup/login?
+- "About" with downward arrow + SVG Change
+
 - Offline indicator
   - Ember-flash? Could use for motd too...
 
@@ -10,6 +14,7 @@
 - Task-button spinner, blue bg, disable while processing
 
 - Color unification
+- Font unification
 
 - Replace ad-hoc links with action/task/rev buttons
 
@@ -22,10 +27,10 @@
 - Loading hook only after certain ms
   - Or disable it for states that use the deferred pattern?
 
-- Add user/settings side-bar/drop-down with log in/out options?
-- Log-in, log-out spot on menu
-  - log-in task failure message
-  - Color-code logged-in/out items
+- log-in task failure message
+- Color-code logged-in/out items
+
+- Greeting when user logged in, in splash screen?
 
 - Animations for routes, stickers
 - Onboarding

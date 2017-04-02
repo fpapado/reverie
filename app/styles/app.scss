@@ -137,3 +137,139 @@
   transition: color .15s ease-in, background-color .15s ease-in-out;
   outline: 1px dotted currentColor;
 }
+
+$accent-color: #87b8e6;
+$accent-dark: #6386a8;
+$text-color: #fff;
+
+.ember-burger-menu {
+  .bm-menu {
+    background: $accent-color;
+
+    a.close {
+      font-family: 'Josefin Slab', cursive;
+      color: $accent-dark;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      padding: 10px;
+
+      &.left {
+        right: 0;
+      }
+
+      &.right {
+        left: 0;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      padding: 1em;
+      color: rgba(0,0,0,0.4);
+      text-shadow: 0 0 1px rgba(0,0,0,0.1);
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Josefin Slab', cursive;
+      font-weight: bold;
+
+      > i {
+        padding-right: 10px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          font-family: 'Josefin Slab', serif;
+          font-weight: bold;
+          display: block;
+          text-decoration: none;
+          padding: 1em 1em 1em 1.2em;
+          outline: none;
+          border-bottom: 1px solid rgba(0,0,0,0.2);
+          color: $text-color;
+          text-transform: uppercase;
+          text-shadow: 0 0 1px rgba(255,255,255,0.1);
+          letter-spacing: 1px;
+          -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+          cursor: pointer;
+
+          > i {
+            margin-right: 20px;
+            font-size: 20px;
+
+            &:before {
+              vertical-align: middle;
+            }
+          }
+
+          &:hover {
+            background: $accent-dark;
+          }
+        }
+
+
+        &:first-child a {
+          border-top: 1px solid rgba(0,0,0,0.2);
+        }
+      }
+    }
+  }
+}
+
+.btn-outline {
+  border-color: $accent-color;
+  box-shadow: none;
+  color: $text-color;
+  font-weight: 300;
+  background: transparent;
+
+  &:hover, &:focus, &:active, &:active:focus, &.active, &.active:hover, &.active:focus {
+    z-index: 0;
+    outline: 0;
+    box-shadow: none;
+    background: $accent-color;
+    color: $text-color;
+    border-color: darken($accent-color, 5);
+  }
+}
+
+.btn-group > .btn.active {
+  z-index: 0;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  padding: 10px 20px;
+  z-index: 100;
+  font-size: 30px;
+  color: $text-color;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+
+  &.burger-hidden {
+    opacity: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &:hover, &:focus, &:active {
+    color: #ccc;
+  }
+}
