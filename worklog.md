@@ -2,8 +2,6 @@
 - UX / Visual
 
 # Visual / UX:
-- Rev-card for notes
-
 - Offline indicator
   - Ember-flash? Could use for motd too...
 
