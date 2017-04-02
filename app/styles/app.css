@@ -33,10 +33,15 @@
   background-color: #f0f7ff;
 }
 
-.active{
+.active {
   opacity: 1;
   color: #fff;
 }
+
+.shadow-bot-blue {
+  box-shadow: 0 0 4px #476179;
+}
+
 
 /* Util */
 .vh-90 {
