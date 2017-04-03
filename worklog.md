@@ -2,12 +2,12 @@
 - UX / Visual
 
 # Visual / UX:
-- "You must be logged in to see this page"
-  - Unified signup/login?
 - "About" with downward arrow + SVG Change
 
 - Offline indicator
   - Ember-flash? Could use for motd too...
+- "You must be logged in to see this page"
+  - Unified signup/login?
 
 - Filter stickers returned from .peek
 
