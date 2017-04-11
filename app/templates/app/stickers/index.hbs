@@ -2,33 +2,25 @@
   {{#rev-card
     title='Your Stickers'}}
 
-    <div class="row mb3 ph3">
-      <div class="ph3 col-xs-12 col-sm-6 col-sm-offset-3 bg-light-blue white">
-        <p class="center measure f6">
-          Stickers are short messages that you can give to people at the session!
-          These are the ones that were sent to you. Perhaps you want to
-          {{#link-to 'app.stickers.send'
-            class="link bb bw1 white hover-mid-gray"
-          }}
-              send one?
-          {{/link-to}}
-        </p>
-      </div>
-    </div>
-
     <div class="row around-xs">
-      {{#each model.stickers as |sticker|}}
+      {{#each stickers as |sticker|}}
         <div class="col-xs-6 col-sm-4 col-md-3 mb3">
         {{#rev-sticker
           sticker=sticker}}
         {{/rev-sticker}}
         </div>
-      {{else}}
-      <span class="db tc">
-        No stickers yet ☹️
-      </span>
       {{/each}}
     </div>
-
+    {{#if isLoadingStickers}}
+    <div class="row center-xs">
+      {{rev-loading}}
+    </div>
+    {{else}}
+      {{#unless stickers}}
+        <div class="col-xs-12 mb3">
+        <p class="mt0 f5 jos measure tc center">You have not received any stickers yet :(</p>
+        </div>
+      {{/unless}}
+    {{/if}}
   {{/rev-card}}
 </div>

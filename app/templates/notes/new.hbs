@@ -1,27 +1,33 @@
-<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">New Note</h2>
-<form class="black-80" onsubmit={{perform createNote}}>
-  <div class="measure center">
-    <div class="mb4 form-group">
-      <label for="title" class="f6 b db mb2">Title</label>
-      {{input value=note-title class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
-    </div>
-    <div class="mb4 form-group">
-      <label for="author" class="f6 b db mb2">Author</label>
-      {{input value=note-author class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
-    </div>
-    <div class="mb4 form-group">
-      <label for="category" class="f6 b db mb2">Category</label>
-      {{input value=note-category class="form-control input-reset ba b--black-20 pa2 mb2 db w-100"}}
-    </div>
-    <div class="mb4 form-group">
-      <label for="content" class="f6 b db mb2">Content</label>
-      {{textarea value=note-content class="db border-box hover-black w-100 measure ba b--black-20 pa2 mb2 form-control"}}
-    </div>
-    {{rev-task-button
-      text="Add Note"
-      task=createNote
-      isDisabled=null}}
-  </div>
-</form>
+<div class="measure center">
+  {{#rev-card
+    title='New Note'
+    task=createNote
+    buttonText='Add Note'
+  }}
+    <form class="black-80" onsubmit={{perform createNote}}>
+      <div class="measure center">
+        {{rev-input
+          value=note-title
+          classNames=''
+          label='Title'}}
 
-{{outlet}}
+        {{rev-input
+          value=note-author
+          classNames=''
+          label='Author'}}
+
+        {{rev-input
+          value=note-category
+          classNames=''
+          label='Category'}}
+
+        {{rev-textarea
+          rows=4
+          value=note-content
+          classNames='mb4'
+          label='Content'}}
+      </div>
+    </form>
+  {{/rev-card}}
+  {{outlet}}
+</div>

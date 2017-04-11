@@ -5,7 +5,7 @@
   buttonDisabled=validations.messages.length
 }}
   {{#if connection.isOffline}}
-    <div class="row mb3 ph3">
+    <div class="row mb4 ph3">
       <div class="w-100 pa3 tc bg-light-red white">
         <p class="center f6">
           You are currently offline, so you cannot send stickers :(
@@ -50,7 +50,6 @@
         value=model.newSticker.title
         errors=(v-get this 'model.newSticker.title' 'messages')
         classNames=''
-        searchEnabled=false
         disabled=connection.isOffline
         label='Message'}}
         <span class="fw5">

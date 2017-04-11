@@ -1,19 +1,20 @@
-<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">My Notes</h2>
+{{#rev-card
+  title='My Notes'}}
+  <ul class="list ph0">
+    {{#each model as |note|}}
+      <li>{{note-details note=note}}</li>
 
-<ul class="list ph0">
-  {{#each model as |note|}}
-    <li>{{note-details note=note}}</li>
-
-  {{else}}
-  <div class="pa4 mb3 bg-near-white note avenir">
-    <p class="db">
-      It seems you have no notes. Why don't you add one?
-    </p>
-    {{#link-to 'notes.new' class="dib mr3 f5 pa3 link-bg-animate bw1 ba bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
-      Add note
-    {{/link-to}}
-  </div>
-  {{/each}}
-</ul>
+    {{else}}
+    <div class="pa4 mb3 bg-near-white note avenir">
+      <p class="db">
+        It seems you have no notes. Why don't you add one?
+      </p>
+      {{#link-to 'notes.new' class="dib mr3 f5 pa3 link-bg-animate bw1 ba bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+        Add note
+      {{/link-to}}
+    </div>
+    {{/each}}
+  </ul>
+{{/rev-card}}
 
 {{outlet}}

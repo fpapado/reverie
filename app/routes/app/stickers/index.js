@@ -1,37 +1,33 @@
 import Ember from 'ember';
+import { task } from 'ember-concurrency';
 
-const { Route, RSVP, inject } = Ember;
+const { Route, inject } = Ember;
 
 export default Route.extend({
   session: inject.service(),
 
   model() {
-    // Used with the explicit query below, if enabled
-    let uid = this.get('session').currentUser.id;
-    return RSVP.hash({
-      // --- Option 1 ---
-      // A downside of this approach is that the data is not linked to the
-      // user's model, but makes sideloading explicit.
-      stickers: this.store.query('sticker', {
-        // eslint-disable-next-line camelcase
-        user_id: uid,
-        include: 'sender,categories'
-      }),
+    return {
+      loadTask: this.get('fetchStickersTask').perform()
+    };
+  },
 
-      // --- Option 2 ---
-      // A bit "magical", as Ember-data handles loading the async relationship
-      // via GET at /users/:id/stickers. Note that this method does not allow
-      // for explicit sideloading atm. The API currently always sideloads
-      // categories and senders, but if it changes, use the query above.
+  setupController(controller) {
+    this._super(...arguments);
+    let stickers = this.store.peekAll('sticker');
+    // TODO: filter to find user ...
+    // TODO: might need to sideload receiver for this
+    //  or check ID
+    controller.set('_loadedStickers', stickers);
+  },
 
-      // The upside is that this allows better linking/caching of a user's
-      // stickers in the model, which does not happen with store.query.
-      // stickers: this.get('session').currentUser.get('stickers', {include: 'sender'}),
-
-      // --- Categories ---
-      // It is important to have the categories available, even if the user
-      // has not been awarded all of them (thus not included in query above)
-      categories: this.store.findAll('category')
+  fetchStickersTask: task(function* () {
+    // See notes/ for why .currentUser.get('stickers') is not used
+    let uid = yield this.get('session').currentUser.id;
+    return yield this.store.query('sticker', {
+      // eslint-disable-next-line camelcase
+      user_id: uid,
+      include: 'sender,categories'
     });
-  }
+  })
 });
