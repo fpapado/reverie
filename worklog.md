@@ -1,10 +1,48 @@
 # Next Feature:
 - UX / Visual
 
+# Visual / UX:
+- "About" with downward arrow + SVG Change
+
+- Offline indicator
+  - Ember-flash? Could use for motd too...
+- "You must be logged in to see this page"
+  - Unified signup/login?
+
+- Filter stickers returned from .peek
+
+- Task-button spinner, blue bg, disable while processing
+
+- Color unification
+- Font unification
+
+- Replace ad-hoc links with action/task/rev buttons
+
+- Ember-concurrency loading state after few ms
+- Signup/in ember-concurrency tasks
+  - Ditto for all routes, actually
+
+- Slower input debounce, add it throughout
+
+- Loading hook only after certain ms
+  - Or disable it for states that use the deferred pattern?
+
+- log-in task failure message
+- Color-code logged-in/out items
+
+- Greeting when user logged in, in splash screen?
+
+- Animations for routes, stickers
+- Onboarding
+- Add Google Fonts to service worker
+
 # Priority
+- Manifest AppCache fix
 - General UI/UX, JG
 - Note overhaul fields,
   - Note card interface overhaul
+  - -category etc.
+  - Note card component
   - Import/Export notes
 - Sticker export
 - "Message of the day"
@@ -12,25 +50,8 @@
 - Admin sticker permissions
 - "Timeline view"
 
-# Visual / UX:
-- Animations for routes, stickers
-- Model hook loading spinner
-- Ember-concurrency loading state after few ms
-- Menus
-  - Menu component
-  - Offline indicator
-  - Flexbox
-  - Color-code logged-in/out items
-  - Log-in, log-out spot on menu
-    - log-in task failure message
-  - Sticker send-received submenu
-- Color unification
-
-- "mandatory=..." option for rev-input to add * to label
-- Slower debounce, add it throughout
-- Task-button spinner, blue bg, disable while processing
-- Replace ad-hoc links with action/task/rev buttons
-
+# Other visual / UX
+- "info" button per screen
 - Sticker UX
   - Sticker "received on", perhaps sort functionality?
   - Loading spinner for stickers
@@ -41,11 +62,15 @@
   - Fancy check marks etc.
   - star for required
   - optional (header|subtitle?)
+  - "mandatory=..." option for rev-input to add * to label
 
-- Signup/in ember-concurrency tasks
-  - Ditto for all routes, actually
 
 # Later:
+- SVG def loading proper
+- Pagination? (Requires scrivener)
+  - At least for the display?
+  - Use that pagination in the sticker exploration
+
 - Include "receiver" in sideloading of stickers index?
 - Loading categories in sticker index hook. Should we do that?
 - Show username for stickers when added to API
@@ -60,9 +85,6 @@
 - Stickers: Remove RSVP.hash and pass naked model?
   - Consider sequencing of category > sticker loading for received stickers
 - Sticker send validation second pass, e.g. "non empty string", "required"
-
-- Pagination? (Requires scrivener)
-  - Use that pagination in the sticker exploration
 
 - Note Card component
   - Note single view

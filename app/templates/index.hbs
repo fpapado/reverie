@@ -1,16 +1,24 @@
-<h2 class="mt0 mb4 f2 fw4 tc black-80 lh-title baskerville">Welcome to Reverie!</h2>
-<div class="pa4 mb3 bg-near-white note avenir tc">
-  <p class="db">
-    You can register or go straight to notes.
-  </p>
-  {{link-to "Register" "auth.register"
-  class="dib mr3 f5 pa3 bw1 ba link-bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+<div class="vh-90 bg-custom-blue overflow-hidden">
+  <div class="h-100 row pa3 middle-xs center-xs white">
+    <div class="col-xs-12">
+      <div class="mt2 tc mw5 center">
+        <h1 class="mt0 mb0 f1 fw5 fredericka lh-title">Reverie</h1>
+        <h2 class="mt0 mb3 f3 fw5 jos lh-title">Moments, places, people</h2>
 
-  {{link-to "Login" "auth.login"
-  class="dib mr3 f5 pa3 bw1 ba link-bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+        <div class="mb3">
+          {{link-to "Register" "auth.register"
+          class="db mb2 f5 fw6 pa2 link-bg-animate bg-light-blue hover-bg-navy white"}}
 
-  {{link-to "See Notes" "notes.index"
-  class="dib f5 pa3 bw1 ba link-bg-animate b--light-blue hover-bg-light-blue black-80 hover-white"}}
+          {{link-to "Log In" "auth.login"
+          class="db mb4 f5 fw6 pa2 link-bg-animate bg-white hover-bg-light-blue custom-blue"}}
+
+          {{link-to "Go to notes" "notes.index"
+          class="db f5 fw6 pa2 link-bg-animate bg-custom-gray hover-bg-light-blue white"}}
+        </div>
+      </div>
+      {{outlet}}
+    </div>
+  </div>
 </div>
 
-{{outlet}}
+{{rev-about}}
