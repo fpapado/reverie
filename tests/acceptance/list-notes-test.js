@@ -18,14 +18,14 @@ test('should link to information about the app.', function(assert) {
 //   });
 // });
 
-test('should link to adding a note.', function(assert) {
-  visit('/notes');
-  click('a:contains("Add Note")');
-  andThen(function() {
-    assert.equal(currentURL(), '/notes/new',
-      'should navigate to new notes route');
-  });
-});
+// test('should link to adding a note.', function(assert) {
+  // visit('/notes');
+  // click('a:contains("Add Note")');
+  // andThen(function() {
+    // assert.equal(currentURL(), '/notes/new',
+      // 'should navigate to new notes route');
+  // });
+// });
 
 // test('should show details for a specific note', function(assert) {
 //   visit('/notes');

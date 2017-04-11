@@ -13,13 +13,4 @@ test('it renders', function(assert) {
   this.render(hbs`{{rev-svgs}}`);
 
   assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#rev-svgs}}
-      template block text
-    {{/rev-svgs}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });
